@@ -19,6 +19,8 @@
 		589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE12F1C04AE5C0043181D /* QueryParameter.m */; };
 		589FE1351C04AE5C0043181D /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1301C04AE5C0043181D /* SearchParameters.m */; };
 		589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1371C04AEB30043181D /* AFNetWorkService.m */; };
+		58D847FC1C058F260061D42A /* NSString+NSStringMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */; };
+		58D848001C0596F20061D42A /* LoadDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D847FF1C0596F20061D42A /* LoadDataDemo.m */; };
 		A6D2E4E54302EC92DC1FA43B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2A74D23C2B0CB472982814 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,10 @@
 		589FE1361C04AEB30043181D /* AFNetWorkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorkService.h; sourceTree = "<group>"; };
 		589FE1371C04AEB30043181D /* AFNetWorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkService.m; sourceTree = "<group>"; };
 		589FE13D1C04AFD60043181D /* KCKPLeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCKPLeader.pch; sourceTree = "<group>"; };
+		58D847FA1C058F260061D42A /* NSString+NSStringMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringMD5.h"; sourceTree = "<group>"; };
+		58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringMD5.m"; sourceTree = "<group>"; };
+		58D847FE1C0596F20061D42A /* LoadDataDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDataDemo.h; sourceTree = "<group>"; };
+		58D847FF1C0596F20061D42A /* LoadDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDataDemo.m; sourceTree = "<group>"; };
 		7C2A74D23C2B0CB472982814 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FCF440C21A19A1C03EFEF7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +135,7 @@
 		589FE1001C04ABA40043181D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				58D847F81C058EFE0061D42A /* tool */,
 				589FE1011C04ABA40043181D /* Info.plist */,
 				589FE1021C04ABA40043181D /* main.m */,
 				589FE13D1C04AFD60043181D /* KCKPLeader.pch */,
@@ -158,16 +165,35 @@
 			children = (
 				589FE1361C04AEB30043181D /* AFNetWorkService.h */,
 				589FE1371C04AEB30043181D /* AFNetWorkService.m */,
-				589FE1281C04AE5C0043181D /* EntityBean.h */,
 				589FE1291C04AE5C0043181D /* Globle.h */,
-				589FE12A1C04AE5C0043181D /* QueryParameter.h */,
-				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
-				589FE12D1C04AE5C0043181D /* EntityBean.m */,
 				589FE12E1C04AE5C0043181D /* Globle.m */,
-				589FE12F1C04AE5C0043181D /* QueryParameter.m */,
+				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
 				589FE1301C04AE5C0043181D /* SearchParameters.m */,
+				589FE1281C04AE5C0043181D /* EntityBean.h */,
+				589FE12D1C04AE5C0043181D /* EntityBean.m */,
+				589FE12A1C04AE5C0043181D /* QueryParameter.h */,
+				589FE12F1C04AE5C0043181D /* QueryParameter.m */,
+				58D847FE1C0596F20061D42A /* LoadDataDemo.h */,
+				58D847FF1C0596F20061D42A /* LoadDataDemo.m */,
 			);
 			name = LoadData;
+			sourceTree = "<group>";
+		};
+		58D847F81C058EFE0061D42A /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				58D847F91C058F100061D42A /* MD5 */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		58D847F91C058F100061D42A /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				58D847FA1C058F260061D42A /* NSString+NSStringMD5.h */,
+				58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */,
+			);
+			name = MD5;
 			sourceTree = "<group>";
 		};
 		9D2F438BE25D7F77134B61DB /* Frameworks */ = {
@@ -333,7 +359,9 @@
 				589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */,
 				589FE1091C04ABA40043181D /* ViewController.m in Sources */,
 				589FE1061C04ABA40043181D /* AppDelegate.m in Sources */,
+				58D847FC1C058F260061D42A /* NSString+NSStringMD5.m in Sources */,
 				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
+				58D848001C0596F20061D42A /* LoadDataDemo.m in Sources */,
 				589FE1321C04AE5C0043181D /* EntityBean.m in Sources */,
 				589FE1031C04ABA40043181D /* main.m in Sources */,
 				589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */,

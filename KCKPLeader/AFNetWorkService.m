@@ -25,7 +25,7 @@
     
     
     //拼接URL
-    NSString *url = [NSString stringWithFormat:@"%@restservices/leap/%@/query",[Globle getInstance].serviceURL,serviceName];
+    NSString *url = [NSString stringWithFormat:@"%@%@/query",[Globle getInstance].serviceURL,serviceName];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     if(!resultIsDictionary)
