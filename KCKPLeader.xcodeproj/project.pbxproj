@@ -744,6 +744,7 @@
 			baseConfigurationReference = 93FCF440C21A19A1C03EFEF7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -757,6 +758,7 @@
 			baseConfigurationReference = 395D80AE113C2B613D4615D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
