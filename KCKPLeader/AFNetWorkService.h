@@ -14,7 +14,7 @@ typedef void(^RequestCompelete)(id result);
 
 @property(nonatomic,retain)id result;
 
--(void)requestWithServiceName:(NSString *)serviceName
+-(void)requestWithServiceIP:(NSString *) serviceIP ServiceName:(NSString *)serviceName
                        params:(NSMutableDictionary *)params
                        httpMethod:(NSString *)httpMethod
                        resultIsDictionary:(BOOL)resultIsDictionary
