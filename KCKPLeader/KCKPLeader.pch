@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #endif
+<<<<<<< HEAD
 
 #import "HMSegmentedControl.h"
 #import "BaseViewController.h"
@@ -24,6 +25,14 @@
 //周文海：http://192.168.20.134:8080/BBTone/
 #define ServiceURL [NSString stringWithFormat:@"%@",@"http://211.154.145.81:977/"];
 #define UpdateURL [NSString stringWithFormat:@"%@",@"http://fjisip.yxybb.com/"];
+=======
+////胡世伟电脑：http://192.168.3.208:86/KCKP/restservices/kckpzcslrest/
+//正式地址：http://fjisip.yxybb.com/restservices/leap/
+//测试地址：http://211.154.145.81:977/restservices/leap/
+//周文海：http://192.168.20.134:8080/BBTone/restservices/leap/
+#define ServiceURL [NSString stringWithFormat:@"%@",@"http://192.168.3.208:86/KCKP/restservices/kckpzcslrest/"];
+#define UpdateURL [NSString stringWithFormat:@"%@",@"http://192.168.3.208:86/KCKP/restservices/kckpzcslrest/"];
+>>>>>>> origin/master
 
 
 //获取设备的物理高度
