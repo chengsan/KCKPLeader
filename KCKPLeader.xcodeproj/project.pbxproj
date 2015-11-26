@@ -10,7 +10,6 @@
 		589FE1031C04ABA40043181D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1021C04ABA40043181D /* main.m */; };
 		589FE1061C04ABA40043181D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1051C04ABA40043181D /* AppDelegate.m */; };
 		589FE1091C04ABA40043181D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1081C04ABA40043181D /* ViewController.m */; };
-		589FE10C1C04ABA40043181D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10A1C04ABA40043181D /* Main.storyboard */; };
 		589FE10E1C04ABA40043181D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10D1C04ABA40043181D /* Images.xcassets */; };
 		589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10F1C04ABA40043181D /* LaunchScreen.xib */; };
 		589FE11D1C04ABA50043181D /* KCKPLeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE11C1C04ABA40043181D /* KCKPLeaderTests.m */; };
@@ -19,6 +18,34 @@
 		589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE12F1C04AE5C0043181D /* QueryParameter.m */; };
 		589FE1351C04AE5C0043181D /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1301C04AE5C0043181D /* SearchParameters.m */; };
 		589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1371C04AEB30043181D /* AFNetWorkService.m */; };
+		859067691C055D8500E9E15E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067641C055D8500E9E15E /* BaseViewController.m */; };
+		8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067661C055D8500E9E15E /* EPNaviController.m */; };
+		8590676B1C055D8500E9E15E /* EPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067681C055D8500E9E15E /* EPTabBarController.m */; };
+		859067781C055D8D00E9E15E /* DecisionAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8590676E1C055D8D00E9E15E /* DecisionAnalysisViewController.m */; };
+		859067791C055D8D00E9E15E /* HomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067711C055D8D00E9E15E /* HomePageViewController.m */; };
+		8590677A1C055D8D00E9E15E /* ProcessSituationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067741C055D8D00E9E15E /* ProcessSituationViewController.m */; };
+		8590677B1C055D8D00E9E15E /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067771C055D8D00E9E15E /* SettingViewController.m */; };
+		8590677E1C055E0600E9E15E /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8590677D1C055E0600E9E15E /* HMSegmentedControl.m */; };
+		859067801C055E4700E9E15E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8590677F1C055E4700E9E15E /* Main.storyboard */; };
+		859067931C0586F200E9E15E /* CaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067911C0586F200E9E15E /* CaseTableViewCell.m */; };
+		859067941C0586F200E9E15E /* CaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067921C0586F200E9E15E /* CaseTableViewCell.xib */; };
+		859067981C058CEC00E9E15E /* TotalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067961C058CEC00E9E15E /* TotalTableViewCell.m */; };
+		859067991C058CEC00E9E15E /* TotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067971C058CEC00E9E15E /* TotalTableViewCell.xib */; };
+		8590679D1C059E9C00E9E15E /* ProcessSituationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8590679B1C059E9C00E9E15E /* ProcessSituationCell.m */; };
+		8590679E1C059E9C00E9E15E /* ProcessSituationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8590679C1C059E9C00E9E15E /* ProcessSituationCell.xib */; };
+		859067A21C05A53600E9E15E /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067A01C05A53600E9E15E /* SettingTableViewCell.m */; };
+		859067A31C05A53600E9E15E /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067A11C05A53600E9E15E /* SettingTableViewCell.xib */; };
+		859067A61C05AF2200E9E15E /* TrafficAccidentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067A51C05AF2200E9E15E /* TrafficAccidentViewController.m */; };
+		859067A91C05AF4A00E9E15E /* ClaimViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067A81C05AF4A00E9E15E /* ClaimViewController.m */; };
+		859067AC1C05AF7100E9E15E /* InsuranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067AB1C05AF7100E9E15E /* InsuranceViewController.m */; };
+		859067AF1C05AFA600E9E15E /* ClaimDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067AE1C05AFA600E9E15E /* ClaimDetailViewController.m */; };
+		859067B21C05AFEA00E9E15E /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067B11C05AFEA00E9E15E /* PlaceViewController.m */; };
+		859067B51C05AFFC00E9E15E /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067B41C05AFFC00E9E15E /* TimeViewController.m */; };
+		859067B81C05B01F00E9E15E /* CircumstancesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067B71C05B01F00E9E15E /* CircumstancesViewController.m */; };
+		859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067BA1C05B08000E9E15E /* UserNameViewController.m */; };
+		859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C01C05B13400E9E15E /* PhoneBindingViewController.m */; };
+		859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C31C05B14300E9E15E /* ChangePhoneViewController.m */; };
+		859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067C51C05BD9700E9E15E /* UserNameViewController.xib */; };
 		A6D2E4E54302EC92DC1FA43B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2A74D23C2B0CB472982814 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +68,6 @@
 		589FE1051C04ABA40043181D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		589FE1071C04ABA40043181D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		589FE1081C04ABA40043181D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		589FE10B1C04ABA40043181D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		589FE10D1C04ABA40043181D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		589FE1101C04ABA40043181D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		589FE1161C04ABA40043181D /* KCKPLeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KCKPLeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +85,56 @@
 		589FE1371C04AEB30043181D /* AFNetWorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkService.m; sourceTree = "<group>"; };
 		589FE13D1C04AFD60043181D /* KCKPLeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCKPLeader.pch; sourceTree = "<group>"; };
 		7C2A74D23C2B0CB472982814 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		859067631C055D8500E9E15E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		859067641C055D8500E9E15E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		859067651C055D8500E9E15E /* EPNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPNaviController.h; sourceTree = "<group>"; };
+		859067661C055D8500E9E15E /* EPNaviController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPNaviController.m; sourceTree = "<group>"; };
+		859067671C055D8500E9E15E /* EPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPTabBarController.h; sourceTree = "<group>"; };
+		859067681C055D8500E9E15E /* EPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPTabBarController.m; sourceTree = "<group>"; };
+		8590676D1C055D8D00E9E15E /* DecisionAnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecisionAnalysisViewController.h; sourceTree = "<group>"; };
+		8590676E1C055D8D00E9E15E /* DecisionAnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecisionAnalysisViewController.m; sourceTree = "<group>"; };
+		859067701C055D8D00E9E15E /* HomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomePageViewController.h; sourceTree = "<group>"; };
+		859067711C055D8D00E9E15E /* HomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomePageViewController.m; sourceTree = "<group>"; };
+		859067731C055D8D00E9E15E /* ProcessSituationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessSituationViewController.h; sourceTree = "<group>"; };
+		859067741C055D8D00E9E15E /* ProcessSituationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessSituationViewController.m; sourceTree = "<group>"; };
+		859067761C055D8D00E9E15E /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		859067771C055D8D00E9E15E /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		8590677C1C055E0600E9E15E /* HMSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSegmentedControl.h; sourceTree = "<group>"; };
+		8590677D1C055E0600E9E15E /* HMSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMSegmentedControl.m; sourceTree = "<group>"; };
+		8590677F1C055E4700E9E15E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		859067901C0586F200E9E15E /* CaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaseTableViewCell.h; sourceTree = "<group>"; };
+		859067911C0586F200E9E15E /* CaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaseTableViewCell.m; sourceTree = "<group>"; };
+		859067921C0586F200E9E15E /* CaseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaseTableViewCell.xib; sourceTree = "<group>"; };
+		859067951C058CEC00E9E15E /* TotalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalTableViewCell.h; sourceTree = "<group>"; };
+		859067961C058CEC00E9E15E /* TotalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalTableViewCell.m; sourceTree = "<group>"; };
+		859067971C058CEC00E9E15E /* TotalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalTableViewCell.xib; sourceTree = "<group>"; };
+		8590679A1C059E9C00E9E15E /* ProcessSituationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessSituationCell.h; sourceTree = "<group>"; };
+		8590679B1C059E9C00E9E15E /* ProcessSituationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessSituationCell.m; sourceTree = "<group>"; };
+		8590679C1C059E9C00E9E15E /* ProcessSituationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProcessSituationCell.xib; sourceTree = "<group>"; };
+		8590679F1C05A53600E9E15E /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		859067A01C05A53600E9E15E /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		859067A11C05A53600E9E15E /* SettingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
+		859067A41C05AF2200E9E15E /* TrafficAccidentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrafficAccidentViewController.h; sourceTree = "<group>"; };
+		859067A51C05AF2200E9E15E /* TrafficAccidentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrafficAccidentViewController.m; sourceTree = "<group>"; };
+		859067A71C05AF4A00E9E15E /* ClaimViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaimViewController.h; sourceTree = "<group>"; };
+		859067A81C05AF4A00E9E15E /* ClaimViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaimViewController.m; sourceTree = "<group>"; };
+		859067AA1C05AF7100E9E15E /* InsuranceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsuranceViewController.h; sourceTree = "<group>"; };
+		859067AB1C05AF7100E9E15E /* InsuranceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsuranceViewController.m; sourceTree = "<group>"; };
+		859067AD1C05AFA600E9E15E /* ClaimDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaimDetailViewController.h; sourceTree = "<group>"; };
+		859067AE1C05AFA600E9E15E /* ClaimDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaimDetailViewController.m; sourceTree = "<group>"; };
+		859067B01C05AFEA00E9E15E /* PlaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		859067B11C05AFEA00E9E15E /* PlaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		859067B31C05AFFC00E9E15E /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
+		859067B41C05AFFC00E9E15E /* TimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
+		859067B61C05B01F00E9E15E /* CircumstancesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircumstancesViewController.h; sourceTree = "<group>"; };
+		859067B71C05B01F00E9E15E /* CircumstancesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircumstancesViewController.m; sourceTree = "<group>"; };
+		859067B91C05B08000E9E15E /* UserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserNameViewController.h; sourceTree = "<group>"; };
+		859067BA1C05B08000E9E15E /* UserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameViewController.m; sourceTree = "<group>"; };
+		859067BF1C05B13400E9E15E /* PhoneBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBindingViewController.h; sourceTree = "<group>"; };
+		859067C01C05B13400E9E15E /* PhoneBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBindingViewController.m; sourceTree = "<group>"; };
+		859067C21C05B14300E9E15E /* ChangePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneViewController.h; sourceTree = "<group>"; };
+		859067C31C05B14300E9E15E /* ChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneViewController.m; sourceTree = "<group>"; };
+		859067C51C05BD9700E9E15E /* UserNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
 		93FCF440C21A19A1C03EFEF7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,12 +189,17 @@
 		589FE0FF1C04ABA40043181D /* KCKPLeader */ = {
 			isa = PBXGroup;
 			children = (
+				8590676F1C055D8D00E9E15E /* HomePage */,
+				859067721C055D8D00E9E15E /* ProcessSituation */,
+				8590676C1C055D8D00E9E15E /* DecisionAnalysis */,
+				859067751C055D8D00E9E15E /* Setting */,
+				859067621C055D8500E9E15E /* Module */,
 				589FE1271C04AE2E0043181D /* LoadData */,
 				589FE1041C04ABA40043181D /* AppDelegate.h */,
 				589FE1051C04ABA40043181D /* AppDelegate.m */,
 				589FE1071C04ABA40043181D /* ViewController.h */,
 				589FE1081C04ABA40043181D /* ViewController.m */,
-				589FE10A1C04ABA40043181D /* Main.storyboard */,
+				8590677F1C055E4700E9E15E /* Main.storyboard */,
 				589FE10D1C04ABA40043181D /* Images.xcassets */,
 				589FE10F1C04ABA40043181D /* LaunchScreen.xib */,
 				589FE1001C04ABA40043181D /* Supporting Files */,
@@ -168,6 +249,186 @@
 				589FE1301C04AE5C0043181D /* SearchParameters.m */,
 			);
 			name = LoadData;
+			sourceTree = "<group>";
+		};
+		859067621C055D8500E9E15E /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				8590677C1C055E0600E9E15E /* HMSegmentedControl.h */,
+				8590677D1C055E0600E9E15E /* HMSegmentedControl.m */,
+				859067631C055D8500E9E15E /* BaseViewController.h */,
+				859067641C055D8500E9E15E /* BaseViewController.m */,
+				859067651C055D8500E9E15E /* EPNaviController.h */,
+				859067661C055D8500E9E15E /* EPNaviController.m */,
+				859067671C055D8500E9E15E /* EPTabBarController.h */,
+				859067681C055D8500E9E15E /* EPTabBarController.m */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		8590676C1C055D8D00E9E15E /* DecisionAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				8590678E1C0586BF00E9E15E /* Model */,
+				8590678A1C0586AC00E9E15E /* View */,
+				859067861C05868400E9E15E /* Controller */,
+			);
+			path = DecisionAnalysis;
+			sourceTree = "<group>";
+		};
+		8590676F1C055D8D00E9E15E /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				8590678C1C0586B400E9E15E /* Model */,
+				859067881C05869F00E9E15E /* View */,
+				859067841C05866800E9E15E /* Controller */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		859067721C055D8D00E9E15E /* ProcessSituation */ = {
+			isa = PBXGroup;
+			children = (
+				8590678D1C0586BB00E9E15E /* Model */,
+				859067891C0586A800E9E15E /* View */,
+				859067851C05868000E9E15E /* Controller */,
+			);
+			path = ProcessSituation;
+			sourceTree = "<group>";
+		};
+		859067751C055D8D00E9E15E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				8590678F1C0586C200E9E15E /* Model */,
+				8590678B1C0586B000E9E15E /* View */,
+				859067871C05868800E9E15E /* Controller */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		859067841C05866800E9E15E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				859067701C055D8D00E9E15E /* HomePageViewController.h */,
+				859067711C055D8D00E9E15E /* HomePageViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		859067851C05868000E9E15E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				859067731C055D8D00E9E15E /* ProcessSituationViewController.h */,
+				859067741C055D8D00E9E15E /* ProcessSituationViewController.m */,
+				859067A41C05AF2200E9E15E /* TrafficAccidentViewController.h */,
+				859067A51C05AF2200E9E15E /* TrafficAccidentViewController.m */,
+				859067A71C05AF4A00E9E15E /* ClaimViewController.h */,
+				859067A81C05AF4A00E9E15E /* ClaimViewController.m */,
+				859067AD1C05AFA600E9E15E /* ClaimDetailViewController.h */,
+				859067AE1C05AFA600E9E15E /* ClaimDetailViewController.m */,
+				859067AA1C05AF7100E9E15E /* InsuranceViewController.h */,
+				859067AB1C05AF7100E9E15E /* InsuranceViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		859067861C05868400E9E15E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8590676D1C055D8D00E9E15E /* DecisionAnalysisViewController.h */,
+				8590676E1C055D8D00E9E15E /* DecisionAnalysisViewController.m */,
+				859067B01C05AFEA00E9E15E /* PlaceViewController.h */,
+				859067B11C05AFEA00E9E15E /* PlaceViewController.m */,
+				859067B31C05AFFC00E9E15E /* TimeViewController.h */,
+				859067B41C05AFFC00E9E15E /* TimeViewController.m */,
+				859067B61C05B01F00E9E15E /* CircumstancesViewController.h */,
+				859067B71C05B01F00E9E15E /* CircumstancesViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		859067871C05868800E9E15E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				859067761C055D8D00E9E15E /* SettingViewController.h */,
+				859067771C055D8D00E9E15E /* SettingViewController.m */,
+				859067B91C05B08000E9E15E /* UserNameViewController.h */,
+				859067BA1C05B08000E9E15E /* UserNameViewController.m */,
+				859067C51C05BD9700E9E15E /* UserNameViewController.xib */,
+				859067BF1C05B13400E9E15E /* PhoneBindingViewController.h */,
+				859067C01C05B13400E9E15E /* PhoneBindingViewController.m */,
+				859067C21C05B14300E9E15E /* ChangePhoneViewController.h */,
+				859067C31C05B14300E9E15E /* ChangePhoneViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		859067881C05869F00E9E15E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				859067901C0586F200E9E15E /* CaseTableViewCell.h */,
+				859067911C0586F200E9E15E /* CaseTableViewCell.m */,
+				859067921C0586F200E9E15E /* CaseTableViewCell.xib */,
+				859067951C058CEC00E9E15E /* TotalTableViewCell.h */,
+				859067961C058CEC00E9E15E /* TotalTableViewCell.m */,
+				859067971C058CEC00E9E15E /* TotalTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		859067891C0586A800E9E15E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8590679A1C059E9C00E9E15E /* ProcessSituationCell.h */,
+				8590679B1C059E9C00E9E15E /* ProcessSituationCell.m */,
+				8590679C1C059E9C00E9E15E /* ProcessSituationCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8590678A1C0586AC00E9E15E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8590678B1C0586B000E9E15E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8590679F1C05A53600E9E15E /* SettingTableViewCell.h */,
+				859067A01C05A53600E9E15E /* SettingTableViewCell.m */,
+				859067A11C05A53600E9E15E /* SettingTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8590678C1C0586B400E9E15E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8590678D1C0586BB00E9E15E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8590678E1C0586BF00E9E15E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8590678F1C0586C200E9E15E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		9D2F438BE25D7F77134B61DB /* Frameworks */ = {
@@ -225,7 +486,7 @@
 		589FE0F51C04ABA40043181D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "程三";
 				TargetAttributes = {
 					589FE0FC1C04ABA40043181D = {
@@ -261,8 +522,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				589FE10C1C04ABA40043181D /* Main.storyboard in Resources */,
+				8590679E1C059E9C00E9E15E /* ProcessSituationCell.xib in Resources */,
+				859067801C055E4700E9E15E /* Main.storyboard in Resources */,
+				859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */,
+				859067941C0586F200E9E15E /* CaseTableViewCell.xib in Resources */,
+				859067991C058CEC00E9E15E /* TotalTableViewCell.xib in Resources */,
 				589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */,
+				859067A31C05A53600E9E15E /* SettingTableViewCell.xib in Resources */,
 				589FE10E1C04ABA40043181D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,14 +595,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8590676B1C055D8500E9E15E /* EPTabBarController.m in Sources */,
+				859067781C055D8D00E9E15E /* DecisionAnalysisViewController.m in Sources */,
+				859067B21C05AFEA00E9E15E /* PlaceViewController.m in Sources */,
 				589FE1351C04AE5C0043181D /* SearchParameters.m in Sources */,
+				859067691C055D8500E9E15E /* BaseViewController.m in Sources */,
+				859067B51C05AFFC00E9E15E /* TimeViewController.m in Sources */,
+				859067791C055D8D00E9E15E /* HomePageViewController.m in Sources */,
+				8590677A1C055D8D00E9E15E /* ProcessSituationViewController.m in Sources */,
+				859067AF1C05AFA600E9E15E /* ClaimDetailViewController.m in Sources */,
 				589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */,
+				859067931C0586F200E9E15E /* CaseTableViewCell.m in Sources */,
+				859067981C058CEC00E9E15E /* TotalTableViewCell.m in Sources */,
 				589FE1091C04ABA40043181D /* ViewController.m in Sources */,
+				859067B81C05B01F00E9E15E /* CircumstancesViewController.m in Sources */,
+				859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */,
+				859067A21C05A53600E9E15E /* SettingTableViewCell.m in Sources */,
+				8590677E1C055E0600E9E15E /* HMSegmentedControl.m in Sources */,
+				8590679D1C059E9C00E9E15E /* ProcessSituationCell.m in Sources */,
+				859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */,
 				589FE1061C04ABA40043181D /* AppDelegate.m in Sources */,
+				8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */,
+				859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */,
 				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
+				859067A61C05AF2200E9E15E /* TrafficAccidentViewController.m in Sources */,
 				589FE1321C04AE5C0043181D /* EntityBean.m in Sources */,
 				589FE1031C04ABA40043181D /* main.m in Sources */,
+				859067A91C05AF4A00E9E15E /* ClaimViewController.m in Sources */,
+				859067AC1C05AF7100E9E15E /* InsuranceViewController.m in Sources */,
 				589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */,
+				8590677B1C055D8D00E9E15E /* SettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,14 +647,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		589FE10A1C04ABA40043181D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				589FE10B1C04ABA40043181D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		589FE10F1C04ABA40043181D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -399,6 +679,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -463,8 +744,10 @@
 			baseConfigurationReference = 93FCF440C21A19A1C03EFEF7 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -474,8 +757,10 @@
 			baseConfigurationReference = 395D80AE113C2B613D4615D7 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -494,6 +779,7 @@
 				);
 				INFOPLIST_FILE = KCKPLeaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KCKPLeader.app/KCKPLeader";
 			};
@@ -509,6 +795,7 @@
 				);
 				INFOPLIST_FILE = KCKPLeaderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KCKPLeader.app/KCKPLeader";
 			};

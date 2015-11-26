@@ -13,6 +13,12 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #endif
+
+#import "HMSegmentedControl.h"
+#import "BaseViewController.h"
+#import "ProcessSituationCell.h"
+#define NAVICOLOR [UIColor colorWithRed:46/255.0 green:117/255.0 blue:254/255.0 alpha:1.0]
+
 //正式地址：http://fjisip.yxybb.com/
 //测试地址：http://211.154.145.81:977/
 //周文海：http://192.168.20.134:8080/BBTone/

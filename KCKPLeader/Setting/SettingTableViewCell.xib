@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="SettingTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XyB-iV-ktf">
+                        <rect key="frame" x="13" y="10" width="36" height="40"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="7Sk-vL-deI"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vK-CZ-eex">
+                        <rect key="frame" x="256" y="15" width="46" height="30"/>
+                        <animations/>
+                        <state key="normal" title="Button"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="有四个字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEa-02-f4f">
+                        <rect key="frame" x="57" y="19" width="73" height="21"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="73" id="ioh-p2-3cP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="eEa-02-f4f" firstAttribute="baseline" secondItem="5vK-CZ-eex" secondAttribute="baseline" id="9aD-Hj-djj"/>
+                    <constraint firstItem="5vK-CZ-eex" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9og-lD-aLs"/>
+                    <constraint firstItem="eEa-02-f4f" firstAttribute="centerY" secondItem="XyB-iV-ktf" secondAttribute="centerY" id="Act-R3-KN0"/>
+                    <constraint firstItem="XyB-iV-ktf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="CBV-h1-7jw"/>
+                    <constraint firstItem="eEa-02-f4f" firstAttribute="baseline" secondItem="5vK-CZ-eex" secondAttribute="firstBaseline" id="KDY-8r-Ogf"/>
+                    <constraint firstItem="XyB-iV-ktf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="c90-6o-4ot"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="5vK-CZ-eex" secondAttribute="trailing" constant="10" id="d0N-08-OZ5"/>
+                    <constraint firstItem="eEa-02-f4f" firstAttribute="leading" secondItem="XyB-iV-ktf" secondAttribute="trailing" constant="8" symbolic="YES" id="kVw-7G-JUq"/>
+                    <constraint firstItem="eEa-02-f4f" firstAttribute="centerY" secondItem="5vK-CZ-eex" secondAttribute="centerY" id="oDD-9V-i67"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="icon" destination="XyB-iV-ktf" id="Ccl-ts-jFG"/>
+                <outlet property="rightBtn" destination="5vK-CZ-eex" id="J2g-h8-4Ad"/>
+                <outlet property="titleLab" destination="eEa-02-f4f" id="yGO-Ot-GhD"/>
+            </connections>
+            <point key="canvasLocation" x="553" y="441"/>
+        </tableViewCell>
+    </objects>
+</document>

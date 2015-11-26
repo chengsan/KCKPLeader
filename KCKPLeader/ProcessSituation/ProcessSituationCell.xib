@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="KGk-i7-Jjw" customClass="ProcessSituationCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyD-ae-PNx">
+                        <rect key="frame" x="57" y="19" width="193" height="21"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v5Z-RQ-Cy3">
+                        <rect key="frame" x="13" y="10" width="36" height="40"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="36" id="Oru-ht-sQT"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="v5Z-RQ-Cy3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="EdI-Tx-beG"/>
+                    <constraint firstItem="dyD-ae-PNx" firstAttribute="leading" secondItem="v5Z-RQ-Cy3" secondAttribute="trailing" constant="8" symbolic="YES" id="Jg5-SR-Ls5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dyD-ae-PNx" secondAttribute="trailing" constant="62" id="OEC-Lr-3vb"/>
+                    <constraint firstItem="v5Z-RQ-Cy3" firstAttribute="centerY" secondItem="dyD-ae-PNx" secondAttribute="centerY" id="Q7O-tC-GMO"/>
+                    <constraint firstItem="dyD-ae-PNx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZZE-Ll-eMJ"/>
+                    <constraint firstItem="dyD-ae-PNx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="e2X-Mf-cfM"/>
+                    <constraint firstItem="v5Z-RQ-Cy3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="g07-DG-8VF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="icon" destination="v5Z-RQ-Cy3" id="CWX-ku-cJS"/>
+                <outlet property="titleLab" destination="dyD-ae-PNx" id="Pdb-eq-teE"/>
+            </connections>
+            <point key="canvasLocation" x="413" y="352"/>
+        </tableViewCell>
+    </objects>
+</document>
