@@ -46,13 +46,6 @@
 		859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C01C05B13400E9E15E /* PhoneBindingViewController.m */; };
 		859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C31C05B14300E9E15E /* ChangePhoneViewController.m */; };
 		859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067C51C05BD9700E9E15E /* UserNameViewController.xib */; };
-		58D847FC1C058F260061D42A /* NSString+NSStringMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */; };
-		58D848001C0596F20061D42A /* LoadDataDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D847FF1C0596F20061D42A /* LoadDataDemo.m */; };
-		58D848041C05A8B20061D42A /* LoginViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D848031C05A8B20061D42A /* LoginViewViewController.m */; };
-		58D848071C05BC260061D42A /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D848061C05BC260061D42A /* Util.m */; };
-		58D8480C1C05BD210061D42A /* logo_txt.png in Resources */ = {isa = PBXBuildFile; fileRef = 58D8480B1C05BD210061D42A /* logo_txt.png */; };
-		58D8480F1C05C0180061D42A /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 58D8480E1C05C0180061D42A /* UIViewExt.m */; };
-		58E32F471C05EB0D00B342E2 /* logo_img.png in Resources */ = {isa = PBXBuildFile; fileRef = 58E32F461C05EB0D00B342E2 /* logo_img.png */; };
 		A6D2E4E54302EC92DC1FA43B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2A74D23C2B0CB472982814 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -91,18 +84,6 @@
 		589FE1361C04AEB30043181D /* AFNetWorkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetWorkService.h; sourceTree = "<group>"; };
 		589FE1371C04AEB30043181D /* AFNetWorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkService.m; sourceTree = "<group>"; };
 		589FE13D1C04AFD60043181D /* KCKPLeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCKPLeader.pch; sourceTree = "<group>"; };
-		58D847FA1C058F260061D42A /* NSString+NSStringMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringMD5.h"; sourceTree = "<group>"; };
-		58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringMD5.m"; sourceTree = "<group>"; };
-		58D847FE1C0596F20061D42A /* LoadDataDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadDataDemo.h; sourceTree = "<group>"; };
-		58D847FF1C0596F20061D42A /* LoadDataDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadDataDemo.m; sourceTree = "<group>"; };
-		58D848021C05A8B20061D42A /* LoginViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewViewController.h; sourceTree = "<group>"; };
-		58D848031C05A8B20061D42A /* LoginViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewViewController.m; sourceTree = "<group>"; };
-		58D848051C05BC260061D42A /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		58D848061C05BC260061D42A /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
-		58D8480B1C05BD210061D42A /* logo_txt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_txt.png; sourceTree = "<group>"; };
-		58D8480D1C05C0180061D42A /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
-		58D8480E1C05C0180061D42A /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
-		58E32F461C05EB0D00B342E2 /* logo_img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_img.png; sourceTree = "<group>"; };
 		7C2A74D23C2B0CB472982814 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		859067631C055D8500E9E15E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		859067641C055D8500E9E15E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -213,7 +194,6 @@
 				8590676C1C055D8D00E9E15E /* DecisionAnalysis */,
 				859067751C055D8D00E9E15E /* Setting */,
 				859067621C055D8500E9E15E /* Module */,
-				58D848011C05A26A0061D42A /* Login */,
 				589FE1271C04AE2E0043181D /* LoadData */,
 				589FE1041C04ABA40043181D /* AppDelegate.h */,
 				589FE1051C04ABA40043181D /* AppDelegate.m */,
@@ -230,8 +210,6 @@
 		589FE1001C04ABA40043181D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				58D848081C05BCFD0061D42A /* image */,
-				58D847F81C058EFE0061D42A /* tool */,
 				589FE1011C04ABA40043181D /* Info.plist */,
 				589FE1021C04ABA40043181D /* main.m */,
 				589FE13D1C04AFD60043181D /* KCKPLeader.pch */,
@@ -261,16 +239,14 @@
 			children = (
 				589FE1361C04AEB30043181D /* AFNetWorkService.h */,
 				589FE1371C04AEB30043181D /* AFNetWorkService.m */,
-				589FE1291C04AE5C0043181D /* Globle.h */,
-				589FE12E1C04AE5C0043181D /* Globle.m */,
-				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
-				589FE1301C04AE5C0043181D /* SearchParameters.m */,
 				589FE1281C04AE5C0043181D /* EntityBean.h */,
-				589FE12D1C04AE5C0043181D /* EntityBean.m */,
+				589FE1291C04AE5C0043181D /* Globle.h */,
 				589FE12A1C04AE5C0043181D /* QueryParameter.h */,
+				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
+				589FE12D1C04AE5C0043181D /* EntityBean.m */,
+				589FE12E1C04AE5C0043181D /* Globle.m */,
 				589FE12F1C04AE5C0043181D /* QueryParameter.m */,
-				58D847FE1C0596F20061D42A /* LoadDataDemo.h */,
-				58D847FF1C0596F20061D42A /* LoadDataDemo.m */,
+				589FE1301C04AE5C0043181D /* SearchParameters.m */,
 			);
 			name = LoadData;
 			sourceTree = "<group>";
@@ -453,45 +429,6 @@
 			children = (
 			);
 			name = Model;
-=======
-		58D847F81C058EFE0061D42A /* tool */ = {
-			isa = PBXGroup;
-			children = (
-				58D847F91C058F100061D42A /* MD5 */,
-				58D8480D1C05C0180061D42A /* UIViewExt.h */,
-				58D8480E1C05C0180061D42A /* UIViewExt.m */,
-				58D848051C05BC260061D42A /* Util.h */,
-				58D848061C05BC260061D42A /* Util.m */,
-			);
-			name = tool;
-			sourceTree = "<group>";
-		};
-		58D847F91C058F100061D42A /* MD5 */ = {
-			isa = PBXGroup;
-			children = (
-				58D847FA1C058F260061D42A /* NSString+NSStringMD5.h */,
-				58D847FB1C058F260061D42A /* NSString+NSStringMD5.m */,
-			);
-			name = MD5;
-			sourceTree = "<group>";
-		};
-		58D848011C05A26A0061D42A /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				58D848021C05A8B20061D42A /* LoginViewViewController.h */,
-				58D848031C05A8B20061D42A /* LoginViewViewController.m */,
-			);
-			name = Login;
-			sourceTree = "<group>";
-		};
-		58D848081C05BCFD0061D42A /* image */ = {
-			isa = PBXGroup;
-			children = (
-				58E32F461C05EB0D00B342E2 /* logo_img.png */,
-				58D8480B1C05BD210061D42A /* logo_txt.png */,
-			);
-			name = image;
->>>>>>> origin/master
 			sourceTree = "<group>";
 		};
 		9D2F438BE25D7F77134B61DB /* Frameworks */ = {
@@ -554,7 +491,6 @@
 				TargetAttributes = {
 					589FE0FC1C04ABA40043181D = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = S58CK2GNVZ;
 					};
 					589FE1151C04ABA40043181D = {
 						CreatedOnToolsVersion = 6.4;
@@ -591,12 +527,9 @@
 				859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */,
 				859067941C0586F200E9E15E /* CaseTableViewCell.xib in Resources */,
 				859067991C058CEC00E9E15E /* TotalTableViewCell.xib in Resources */,
-				589FE10C1C04ABA40043181D /* Main.storyboard in Resources */,
-				58D8480C1C05BD210061D42A /* logo_txt.png in Resources */,
 				589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */,
 				859067A31C05A53600E9E15E /* SettingTableViewCell.xib in Resources */,
 				589FE10E1C04ABA40043181D /* Images.xcassets in Resources */,
-				58E32F471C05EB0D00B342E2 /* logo_img.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,19 +619,12 @@
 				859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */,
 				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
 				859067A61C05AF2200E9E15E /* TrafficAccidentViewController.m in Sources */,
-
-				58D847FC1C058F260061D42A /* NSString+NSStringMD5.m in Sources */,
-				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
-				58D848001C0596F20061D42A /* LoadDataDemo.m in Sources */,
 				589FE1321C04AE5C0043181D /* EntityBean.m in Sources */,
-				58D848041C05A8B20061D42A /* LoginViewViewController.m in Sources */,
-				58D8480F1C05C0180061D42A /* UIViewExt.m in Sources */,
 				589FE1031C04ABA40043181D /* main.m in Sources */,
 				859067A91C05AF4A00E9E15E /* ClaimViewController.m in Sources */,
 				859067AC1C05AF7100E9E15E /* InsuranceViewController.m in Sources */,
 				589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */,
 				8590677B1C055D8D00E9E15E /* SettingViewController.m in Sources */,
-				58D848071C05BC260061D42A /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,10 +745,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -835,10 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
