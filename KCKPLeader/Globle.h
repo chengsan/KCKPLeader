@@ -22,5 +22,4 @@
 
 +(Globle *)getInstance;
 
-
 @end
