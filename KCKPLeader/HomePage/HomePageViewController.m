@@ -9,6 +9,7 @@
 #import "HomePageViewController.h"
 #import "CaseTableViewCell.h"
 #import "TotalTableViewCell.h"
+#import "TotalSituationViewController.h"
 @interface HomePageViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -16,16 +17,15 @@
 
 @implementation HomePageViewController
 
-- (void)viewWillAppear:(BOOL)animated{
-
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"首页";
+    
     _segmentControl = [[HMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
-    _segmentControl.sectionTitles = @[@"今天",@"本周",@"本月"];
+    _segmentControl.sectionTitles = @[@"案件处理",@"自行协商",@"远程指导",@"转现场"];
+    _segmentControl.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
     _segmentControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : NAVICOLOR};
     _segmentControl.selectionIndicatorColor = NAVICOLOR;
     _segmentControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
@@ -40,27 +40,33 @@
     }];
     
     self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 40, ScreenWidth, 220)];
-    self.scrollView.contentSize = CGSizeMake(ScreenWidth * 3, 220);
+    self.scrollView.contentSize = CGSizeMake(ScreenWidth * 4, 220);
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
     self.scrollView.bounces = NO;
     [self.view addSubview:self.scrollView];
     
+    
     UILabel *label1 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 220)];
     [self setApperanceForLabel:label1];
-    label1.text = @"Today";
+    label1.text = @"Case";
     [self.scrollView addSubview:label1];
     
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth, 0, ScreenWidth, 220)];
     [self setApperanceForLabel:label2];
-    label2.text = @"Week";
+    label2.text = @"Talk";
     [self.scrollView addSubview:label2];
     
     UILabel *label3 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth * 2, 0, ScreenWidth, 220)];
     [self setApperanceForLabel:label3];
-    label3.text = @"Month";
+    label3.text = @"Conduct";
     [self.scrollView addSubview:label3];
+    
+    UILabel *label4 = [[UILabel alloc] initWithFrame:CGRectMake(ScreenWidth * 3, 0, ScreenWidth, 220)];
+    [self setApperanceForLabel:label4];
+    label4.text = @"Scene";
+    [self.scrollView addSubview:label4];
     
     self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.scrollView.frame), ScreenWidth, 295);
     self.tableView.bounces = NO;

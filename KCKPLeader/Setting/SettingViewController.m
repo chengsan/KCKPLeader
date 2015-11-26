@@ -10,7 +10,7 @@
 #import "SettingTableViewCell.h"
 #import "UserNameViewController.h"
 #import "PhoneBindingViewController.h"
-#import "ChangePhoneViewController.h"
+#import "ChangePassWordViewController.h"
 @interface SettingViewController ()
 
 @end
@@ -52,27 +52,27 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSArray *titleAry = @[@"用户名",@"手机",@"登录密码"];
     SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SettingTableViewCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             cell.icon.image = [UIImage imageNamed:@"ico20"];
             cell.titleLab.text = @"用户名";
-            [cell.rightBtn setTitle:@"Longrise" forState:UIControlStateNormal];
-            [cell.rightBtn setTitleColor:[UIColor grayColor] forState:  UIControlStateNormal];
+            
+            cell.rightLab.text = @"Longrise";
+            cell.rightLab.textColor = [UIColor grayColor];
         }
         else if (indexPath.row == 1) {
             cell.icon.image = [UIImage imageNamed:@"ico21"];
             cell.titleLab.text = @"手机";
-            [cell.rightBtn setTitle:@"13888888888" forState:UIControlStateNormal];
-            [cell.rightBtn setTitleColor:[UIColor grayColor] forState:  UIControlStateNormal];
+            cell.rightLab.text = @"13888888888";
+            cell.rightLab.textColor = [UIColor grayColor];
         }
         else {
             cell.icon.image = [UIImage imageNamed:@"ico22"];
             cell.titleLab.text = @"登录密码";
-            [cell.rightBtn setTitle:@"修改" forState:UIControlStateNormal];
-//            [cell.rightBtn addTarget:self action:@selector(ClickBtn) forControlEvents:UIControlEventTouchUpInside];
+            cell.rightLab.text = @"修改";
+            cell.rightLab.textColor = NAVICOLOR;
         }
     }
     else if (indexPath.section == 1){
@@ -85,8 +85,7 @@
             cell.icon.image = [UIImage imageNamed:@"ico24"];
             cell.titleLab.text = @"退出登录";
         }
-        [cell.rightBtn setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
-        
+        cell.rightLab.textColor = [UIColor clearColor];
     }
     return cell;
 }
@@ -96,23 +95,33 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    SettingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
     if (indexPath.section == 0) {
         UIViewController *vc;
         if (indexPath.row == 0) {
             vc = [UserNameViewController new];
+            vc.title = @"用户名";
         }
         else if (indexPath.row == 1){
-            SettingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-            if (cell.rightBtn.titleLabel.text == NULL) {
-                vc = [PhoneBindingViewController new];
+            vc = (PhoneBindingViewController *)[PhoneBindingViewController new];
+            if ([cell.rightLab.text isEqualToString:@""]) {
+                vc.title = @"绑定手机";
             }
             else{
-                vc = [ChangePhoneViewController new];
+                vc.title = @"换绑手机";
             }
         }
+        else{
+            vc = [ChangePassWordViewController new];
+            vc.title = @"修改密码";
+        }
+        
         [self.navigationController pushViewController:vc animated:YES];
     }
     else{
+        
         if (indexPath.row == 0) {
             
         }

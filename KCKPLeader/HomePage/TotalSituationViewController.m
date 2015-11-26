@@ -1,23 +1,22 @@
 //
-//  ChangePhoneViewController.m
+//  TotalSituationViewController.m
 //  KCKPLeader
 //
-//  Created by Siren on 15/11/25.
+//  Created by Siren on 15/11/26.
 //  Copyright © 2015年 程三. All rights reserved.
 //
 
-#import "ChangePhoneViewController.h"
+#import "TotalSituationViewController.h"
 
-@interface ChangePhoneViewController ()
+@interface TotalSituationViewController ()
 
 @end
 
-@implementation ChangePhoneViewController
+@implementation TotalSituationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {

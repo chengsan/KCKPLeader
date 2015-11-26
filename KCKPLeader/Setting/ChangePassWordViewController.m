@@ -1,31 +1,23 @@
 //
-//  PhoneBindingViewController.m
+//  ChangePassWordViewController.m
 //  KCKPLeader
 //
-//  Created by Siren on 15/11/25.
+//  Created by Siren on 15/11/26.
 //  Copyright © 2015年 程三. All rights reserved.
 //
 
-#import "PhoneBindingViewController.h"
+#import "ChangePassWordViewController.h"
 
-@interface PhoneBindingViewController ()
+@interface ChangePassWordViewController ()
 
 @end
 
-@implementation PhoneBindingViewController
+@implementation ChangePassWordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = [UIColor whiteColor];
-    if ([self.title isEqualToString:@"换绑手机"]) {
-        [self.confirmBtn setTitle:@"验证后绑定手机" forState:UIControlStateNormal];
-    }
-    else{
-        [self.confirmBtn setTitle:@"确认绑定" forState:UIControlStateNormal];
-    }
-    self.confirmBtn.backgroundColor = NAVICOLOR;
-    
 }
 
 - (void)didReceiveMemoryWarning {

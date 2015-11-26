@@ -17,16 +17,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSArray *names = @[@"首页",@"处理情况",@"决策分析",@"设置"];
-    NSArray *imgAry = @[@"nav01",@"nav02",@"nav03",@"nav04"];
-    NSArray *selectedImgAry = @[@"nav01_on",@"nav02_on",@"nav03_on",@"nav04_on"];
-    for (int i=0; i<4; i++) {
+//    NSArray *names = @[@"首页",@"处理情况",@"决策分析",@"设置"];
+//    NSArray *imgAry = @[@"nav01",@"nav02",@"nav03",@"nav04"];
+//    NSArray *selectedImgAry = @[@"nav01_on",@"nav02_on",@"nav03_on",@"nav04_on"];
+//    for (int i=0; i<4; i++) {
+//        UINavigationController *nav = self.viewControllers[i];
+//        UIViewController *vc = nav.viewControllers[0];
+//        UIImage *image = [UIImage imageNamed:imgAry[i]];
+//        UIImage *selectedImage = [UIImage imageNamed:selectedImgAry[i]];
+//        vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:names[i] image:image selectedImage:selectedImage];
+//    }
+    
+    NSArray *names = @[@"首页",@"处理情况",@"设置"];
+    NSArray *imgAry = @[@"nav01",@"nav02",@"nav04"];
+    NSArray *selectedImgAry = @[@"nav01_on",@"nav02_on",@"nav04_on"];
+    for (int i=0; i<3; i++) {
         UINavigationController *nav = self.viewControllers[i];
         UIViewController *vc = nav.viewControllers[0];
         UIImage *image = [UIImage imageNamed:imgAry[i]];
         UIImage *selectedImage = [UIImage imageNamed:selectedImgAry[i]];
         vc.tabBarItem = [[UITabBarItem alloc]initWithTitle:names[i] image:image selectedImage:selectedImage];
-        
     }
 }
 

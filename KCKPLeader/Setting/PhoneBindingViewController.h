@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PhoneBindingViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet UITextField *codeField;
+@property (weak, nonatomic) IBOutlet UIButton *sengBtn;
+@property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -14,33 +14,46 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" id="yBs-D3-Brq">
-                    <rect key="frame" x="37" y="39" width="246" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yBs-D3-Brq">
+                    <rect key="frame" x="37" y="39" width="526" height="30"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名只能修改一次（5-24字符之间）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="11c-EF-sbG">
-                    <rect key="frame" x="40" y="85" width="225" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名只能修改一次（5-24字符之间）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11c-EF-sbG">
+                    <rect key="frame" x="40" y="85" width="505" height="21"/>
                     <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="UIy-nl-CMr"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hUG-zA-l7o">
-                    <rect key="frame" x="42" y="128" width="241" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hUG-zA-l7o">
+                    <rect key="frame" x="42" y="128" width="521" height="30"/>
                     <animations/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="确认修改">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="hUG-zA-l7o" firstAttribute="trailing" secondItem="yBs-D3-Brq" secondAttribute="trailing" id="7px-bu-aQc"/>
+                <constraint firstItem="hUG-zA-l7o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="42" id="AZ6-RC-w3t"/>
+                <constraint firstItem="yBs-D3-Brq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="39" id="SPJ-fx-iVg"/>
+                <constraint firstItem="11c-EF-sbG" firstAttribute="top" secondItem="yBs-D3-Brq" secondAttribute="bottom" constant="16" id="XON-Y0-fhA"/>
+                <constraint firstAttribute="trailing" secondItem="11c-EF-sbG" secondAttribute="trailing" constant="55" id="ZYv-sI-492"/>
+                <constraint firstItem="hUG-zA-l7o" firstAttribute="top" secondItem="11c-EF-sbG" secondAttribute="bottom" constant="22" id="q36-u2-6RQ"/>
+                <constraint firstItem="yBs-D3-Brq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="qHv-bp-oTh"/>
+                <constraint firstItem="yBs-D3-Brq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="37" id="rgC-Vh-1hC"/>
+                <constraint firstItem="11c-EF-sbG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="tQV-iF-m7Z"/>
+            </constraints>
             <point key="canvasLocation" x="553" y="433"/>
         </view>
     </objects>

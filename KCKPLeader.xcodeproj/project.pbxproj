@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		589FE1031C04ABA40043181D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1021C04ABA40043181D /* main.m */; };
 		589FE1061C04ABA40043181D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1051C04ABA40043181D /* AppDelegate.m */; };
-		589FE1091C04ABA40043181D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1081C04ABA40043181D /* ViewController.m */; };
 		589FE10E1C04ABA40043181D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10D1C04ABA40043181D /* Images.xcassets */; };
 		589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10F1C04ABA40043181D /* LaunchScreen.xib */; };
 		589FE11D1C04ABA50043181D /* KCKPLeaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE11C1C04ABA40043181D /* KCKPLeaderTests.m */; };
@@ -18,6 +17,12 @@
 		589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE12F1C04AE5C0043181D /* QueryParameter.m */; };
 		589FE1351C04AE5C0043181D /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1301C04AE5C0043181D /* SearchParameters.m */; };
 		589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1371C04AEB30043181D /* AFNetWorkService.m */; };
+		8541A6F71C06A45D00B8BB2E /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A6F51C06A45D00B8BB2E /* ChangePassWordViewController.m */; };
+		8541A6F81C06A45D00B8BB2E /* ChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8541A6F61C06A45D00B8BB2E /* ChangePassWordViewController.xib */; };
+		8541A6FA1C06B15300B8BB2E /* PhoneBindingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8541A6F91C06B15300B8BB2E /* PhoneBindingViewController.xib */; };
+		8541A7001C06D23200B8BB2E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A6FE1C06D23200B8BB2E /* LoginViewController.m */; };
+		8541A7031C06F22400B8BB2E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8541A7021C06F22400B8BB2E /* Login.storyboard */; };
+		8541A7061C07002D00B8BB2E /* TotalSituationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A7051C07002D00B8BB2E /* TotalSituationViewController.m */; };
 		859067691C055D8500E9E15E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067641C055D8500E9E15E /* BaseViewController.m */; };
 		8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067661C055D8500E9E15E /* EPNaviController.m */; };
 		8590676B1C055D8500E9E15E /* EPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067681C055D8500E9E15E /* EPTabBarController.m */; };
@@ -44,7 +49,6 @@
 		859067B81C05B01F00E9E15E /* CircumstancesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067B71C05B01F00E9E15E /* CircumstancesViewController.m */; };
 		859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067BA1C05B08000E9E15E /* UserNameViewController.m */; };
 		859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C01C05B13400E9E15E /* PhoneBindingViewController.m */; };
-		859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C31C05B14300E9E15E /* ChangePhoneViewController.m */; };
 		859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067C51C05BD9700E9E15E /* UserNameViewController.xib */; };
 		A6D2E4E54302EC92DC1FA43B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C2A74D23C2B0CB472982814 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -66,8 +70,6 @@
 		589FE1021C04ABA40043181D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		589FE1041C04ABA40043181D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		589FE1051C04ABA40043181D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		589FE1071C04ABA40043181D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		589FE1081C04ABA40043181D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		589FE10D1C04ABA40043181D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		589FE1101C04ABA40043181D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		589FE1161C04ABA40043181D /* KCKPLeaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KCKPLeaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +87,15 @@
 		589FE1371C04AEB30043181D /* AFNetWorkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetWorkService.m; sourceTree = "<group>"; };
 		589FE13D1C04AFD60043181D /* KCKPLeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCKPLeader.pch; sourceTree = "<group>"; };
 		7C2A74D23C2B0CB472982814 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8541A6F41C06A45D00B8BB2E /* ChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassWordViewController.h; sourceTree = "<group>"; };
+		8541A6F51C06A45D00B8BB2E /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
+		8541A6F61C06A45D00B8BB2E /* ChangePassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassWordViewController.xib; sourceTree = "<group>"; };
+		8541A6F91C06B15300B8BB2E /* PhoneBindingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneBindingViewController.xib; sourceTree = "<group>"; };
+		8541A6FD1C06D23200B8BB2E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8541A6FE1C06D23200B8BB2E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8541A7021C06F22400B8BB2E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		8541A7041C07002D00B8BB2E /* TotalSituationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalSituationViewController.h; sourceTree = "<group>"; };
+		8541A7051C07002D00B8BB2E /* TotalSituationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalSituationViewController.m; sourceTree = "<group>"; };
 		859067631C055D8500E9E15E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		859067641C055D8500E9E15E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		859067651C055D8500E9E15E /* EPNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPNaviController.h; sourceTree = "<group>"; };
@@ -132,8 +143,6 @@
 		859067BA1C05B08000E9E15E /* UserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserNameViewController.m; sourceTree = "<group>"; };
 		859067BF1C05B13400E9E15E /* PhoneBindingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneBindingViewController.h; sourceTree = "<group>"; };
 		859067C01C05B13400E9E15E /* PhoneBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBindingViewController.m; sourceTree = "<group>"; };
-		859067C21C05B14300E9E15E /* ChangePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePhoneViewController.h; sourceTree = "<group>"; };
-		859067C31C05B14300E9E15E /* ChangePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePhoneViewController.m; sourceTree = "<group>"; };
 		859067C51C05BD9700E9E15E /* UserNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
 		93FCF440C21A19A1C03EFEF7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -197,9 +206,8 @@
 				589FE1271C04AE2E0043181D /* LoadData */,
 				589FE1041C04ABA40043181D /* AppDelegate.h */,
 				589FE1051C04ABA40043181D /* AppDelegate.m */,
-				589FE1071C04ABA40043181D /* ViewController.h */,
-				589FE1081C04ABA40043181D /* ViewController.m */,
 				8590677F1C055E4700E9E15E /* Main.storyboard */,
+				8541A7021C06F22400B8BB2E /* Login.storyboard */,
 				589FE10D1C04ABA40043181D /* Images.xcassets */,
 				589FE10F1C04ABA40043181D /* LaunchScreen.xib */,
 				589FE1001C04ABA40043181D /* Supporting Files */,
@@ -240,12 +248,12 @@
 				589FE1361C04AEB30043181D /* AFNetWorkService.h */,
 				589FE1371C04AEB30043181D /* AFNetWorkService.m */,
 				589FE1281C04AE5C0043181D /* EntityBean.h */,
-				589FE1291C04AE5C0043181D /* Globle.h */,
-				589FE12A1C04AE5C0043181D /* QueryParameter.h */,
-				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
 				589FE12D1C04AE5C0043181D /* EntityBean.m */,
+				589FE1291C04AE5C0043181D /* Globle.h */,
 				589FE12E1C04AE5C0043181D /* Globle.m */,
+				589FE12A1C04AE5C0043181D /* QueryParameter.h */,
 				589FE12F1C04AE5C0043181D /* QueryParameter.m */,
+				589FE12B1C04AE5C0043181D /* SearchParameters.h */,
 				589FE1301C04AE5C0043181D /* SearchParameters.m */,
 			);
 			name = LoadData;
@@ -262,6 +270,8 @@
 				859067661C055D8500E9E15E /* EPNaviController.m */,
 				859067671C055D8500E9E15E /* EPTabBarController.h */,
 				859067681C055D8500E9E15E /* EPTabBarController.m */,
+				8541A6FD1C06D23200B8BB2E /* LoginViewController.h */,
+				8541A6FE1C06D23200B8BB2E /* LoginViewController.m */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -311,6 +321,8 @@
 			children = (
 				859067701C055D8D00E9E15E /* HomePageViewController.h */,
 				859067711C055D8D00E9E15E /* HomePageViewController.m */,
+				8541A7041C07002D00B8BB2E /* TotalSituationViewController.h */,
+				8541A7051C07002D00B8BB2E /* TotalSituationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,8 +369,10 @@
 				859067C51C05BD9700E9E15E /* UserNameViewController.xib */,
 				859067BF1C05B13400E9E15E /* PhoneBindingViewController.h */,
 				859067C01C05B13400E9E15E /* PhoneBindingViewController.m */,
-				859067C21C05B14300E9E15E /* ChangePhoneViewController.h */,
-				859067C31C05B14300E9E15E /* ChangePhoneViewController.m */,
+				8541A6F91C06B15300B8BB2E /* PhoneBindingViewController.xib */,
+				8541A6F41C06A45D00B8BB2E /* ChangePassWordViewController.h */,
+				8541A6F51C06A45D00B8BB2E /* ChangePassWordViewController.m */,
+				8541A6F61C06A45D00B8BB2E /* ChangePassWordViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -524,12 +538,15 @@
 			files = (
 				8590679E1C059E9C00E9E15E /* ProcessSituationCell.xib in Resources */,
 				859067801C055E4700E9E15E /* Main.storyboard in Resources */,
+				8541A6F81C06A45D00B8BB2E /* ChangePassWordViewController.xib in Resources */,
 				859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */,
 				859067941C0586F200E9E15E /* CaseTableViewCell.xib in Resources */,
 				859067991C058CEC00E9E15E /* TotalTableViewCell.xib in Resources */,
 				589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */,
 				859067A31C05A53600E9E15E /* SettingTableViewCell.xib in Resources */,
 				589FE10E1C04ABA40043181D /* Images.xcassets in Resources */,
+				8541A6FA1C06B15300B8BB2E /* PhoneBindingViewController.xib in Resources */,
+				8541A7031C06F22400B8BB2E /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,8 +623,8 @@
 				859067AF1C05AFA600E9E15E /* ClaimDetailViewController.m in Sources */,
 				589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */,
 				859067931C0586F200E9E15E /* CaseTableViewCell.m in Sources */,
+				8541A6F71C06A45D00B8BB2E /* ChangePassWordViewController.m in Sources */,
 				859067981C058CEC00E9E15E /* TotalTableViewCell.m in Sources */,
-				589FE1091C04ABA40043181D /* ViewController.m in Sources */,
 				859067B81C05B01F00E9E15E /* CircumstancesViewController.m in Sources */,
 				859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */,
 				859067A21C05A53600E9E15E /* SettingTableViewCell.m in Sources */,
@@ -616,15 +633,16 @@
 				859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */,
 				589FE1061C04ABA40043181D /* AppDelegate.m in Sources */,
 				8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */,
-				859067C41C05B14300E9E15E /* ChangePhoneViewController.m in Sources */,
 				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
 				859067A61C05AF2200E9E15E /* TrafficAccidentViewController.m in Sources */,
 				589FE1321C04AE5C0043181D /* EntityBean.m in Sources */,
+				8541A7061C07002D00B8BB2E /* TotalSituationViewController.m in Sources */,
 				589FE1031C04ABA40043181D /* main.m in Sources */,
 				859067A91C05AF4A00E9E15E /* ClaimViewController.m in Sources */,
 				859067AC1C05AF7100E9E15E /* InsuranceViewController.m in Sources */,
 				589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */,
 				8590677B1C055D8D00E9E15E /* SettingViewController.m in Sources */,
+				8541A7001C06D23200B8BB2E /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

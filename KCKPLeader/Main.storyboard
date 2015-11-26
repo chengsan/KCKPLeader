@@ -45,26 +45,6 @@
             </objects>
             <point key="canvasLocation" x="865" y="1033"/>
         </scene>
-        <!--决策分析-->
-        <scene sceneID="WoD-fN-LGb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HVw-pN-fmC" customClass="EPNaviController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="决策分析" id="OV1-dA-M9T"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bkA-JM-PJx">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="LH5-Yo-8rD" kind="relationship" relationship="rootViewController" id="PuP-K8-WPC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V8O-pF-lqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="865" y="1669"/>
-        </scene>
         <!--设置-->
         <scene sceneID="acK-Xu-Hti">
             <objects>
@@ -104,26 +84,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gwn-Hw-eBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677" y="1033"/>
-        </scene>
-        <!--Decision Analysis View Controller-->
-        <scene sceneID="VdZ-oq-LgA">
-            <objects>
-                <viewController id="LH5-Yo-8rD" customClass="DecisionAnalysisViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ijk-MA-qOX"/>
-                        <viewControllerLayoutGuide type="bottom" id="FGI-aD-TkZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WvT-aw-IQG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Any-ph-lCz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7l3-9X-jWt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1677" y="1669"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="1pq-KF-nSO">
@@ -178,7 +138,6 @@
                     <connections>
                         <segue destination="ADa-62-lVr" kind="relationship" relationship="viewControllers" id="K0k-Ur-M9F"/>
                         <segue destination="9V0-jN-p9v" kind="relationship" relationship="viewControllers" id="A6g-Zb-SF5"/>
-                        <segue destination="HVw-pN-fmC" kind="relationship" relationship="viewControllers" id="ZLx-IQ-7YE"/>
                         <segue destination="bjv-Yu-gHy" kind="relationship" relationship="viewControllers" id="S5C-73-lqO"/>
                     </connections>
                 </tabBarController>
