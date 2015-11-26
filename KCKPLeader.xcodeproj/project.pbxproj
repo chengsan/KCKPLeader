@@ -23,6 +23,10 @@
 		8541A7001C06D23200B8BB2E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A6FE1C06D23200B8BB2E /* LoginViewController.m */; };
 		8541A7031C06F22400B8BB2E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8541A7021C06F22400B8BB2E /* Login.storyboard */; };
 		8541A7061C07002D00B8BB2E /* TotalSituationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A7051C07002D00B8BB2E /* TotalSituationViewController.m */; };
+		8541A70E1C070FAA00B8BB2E /* NSString+NSStringMD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A7091C070FAA00B8BB2E /* NSString+NSStringMD5.m */; };
+		8541A70F1C070FAA00B8BB2E /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A70B1C070FAA00B8BB2E /* UIViewExt.m */; };
+		8541A7101C070FAA00B8BB2E /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A70D1C070FAA00B8BB2E /* Util.m */; };
+		8541A7131C070FD400B8BB2E /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A7121C070FD400B8BB2E /* Demo.m */; };
 		859067691C055D8500E9E15E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067641C055D8500E9E15E /* BaseViewController.m */; };
 		8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067661C055D8500E9E15E /* EPNaviController.m */; };
 		8590676B1C055D8500E9E15E /* EPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067681C055D8500E9E15E /* EPTabBarController.m */; };
@@ -96,6 +100,14 @@
 		8541A7021C06F22400B8BB2E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8541A7041C07002D00B8BB2E /* TotalSituationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalSituationViewController.h; sourceTree = "<group>"; };
 		8541A7051C07002D00B8BB2E /* TotalSituationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalSituationViewController.m; sourceTree = "<group>"; };
+		8541A7081C070FAA00B8BB2E /* NSString+NSStringMD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringMD5.h"; sourceTree = "<group>"; };
+		8541A7091C070FAA00B8BB2E /* NSString+NSStringMD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringMD5.m"; sourceTree = "<group>"; };
+		8541A70A1C070FAA00B8BB2E /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		8541A70B1C070FAA00B8BB2E /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		8541A70C1C070FAA00B8BB2E /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		8541A70D1C070FAA00B8BB2E /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		8541A7111C070FD400B8BB2E /* Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
+		8541A7121C070FD400B8BB2E /* Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
 		859067631C055D8500E9E15E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		859067641C055D8500E9E15E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		859067651C055D8500E9E15E /* EPNaviController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPNaviController.h; sourceTree = "<group>"; };
@@ -198,6 +210,7 @@
 		589FE0FF1C04ABA40043181D /* KCKPLeader */ = {
 			isa = PBXGroup;
 			children = (
+				8541A7071C070FAA00B8BB2E /* Tool */,
 				8590676F1C055D8D00E9E15E /* HomePage */,
 				859067721C055D8D00E9E15E /* ProcessSituation */,
 				8590676C1C055D8D00E9E15E /* DecisionAnalysis */,
@@ -245,6 +258,8 @@
 		589FE1271C04AE2E0043181D /* LoadData */ = {
 			isa = PBXGroup;
 			children = (
+				8541A7111C070FD400B8BB2E /* Demo.h */,
+				8541A7121C070FD400B8BB2E /* Demo.m */,
 				589FE1361C04AEB30043181D /* AFNetWorkService.h */,
 				589FE1371C04AEB30043181D /* AFNetWorkService.m */,
 				589FE1281C04AE5C0043181D /* EntityBean.h */,
@@ -257,6 +272,19 @@
 				589FE1301C04AE5C0043181D /* SearchParameters.m */,
 			);
 			name = LoadData;
+			sourceTree = "<group>";
+		};
+		8541A7071C070FAA00B8BB2E /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				8541A7081C070FAA00B8BB2E /* NSString+NSStringMD5.h */,
+				8541A7091C070FAA00B8BB2E /* NSString+NSStringMD5.m */,
+				8541A70A1C070FAA00B8BB2E /* UIViewExt.h */,
+				8541A70B1C070FAA00B8BB2E /* UIViewExt.m */,
+				8541A70C1C070FAA00B8BB2E /* Util.h */,
+				8541A70D1C070FAA00B8BB2E /* Util.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		859067621C055D8500E9E15E /* Module */ = {
@@ -625,11 +653,15 @@
 				859067931C0586F200E9E15E /* CaseTableViewCell.m in Sources */,
 				8541A6F71C06A45D00B8BB2E /* ChangePassWordViewController.m in Sources */,
 				859067981C058CEC00E9E15E /* TotalTableViewCell.m in Sources */,
+				8541A70F1C070FAA00B8BB2E /* UIViewExt.m in Sources */,
 				859067B81C05B01F00E9E15E /* CircumstancesViewController.m in Sources */,
 				859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */,
 				859067A21C05A53600E9E15E /* SettingTableViewCell.m in Sources */,
+				8541A7101C070FAA00B8BB2E /* Util.m in Sources */,
 				8590677E1C055E0600E9E15E /* HMSegmentedControl.m in Sources */,
 				8590679D1C059E9C00E9E15E /* ProcessSituationCell.m in Sources */,
+				8541A7131C070FD400B8BB2E /* Demo.m in Sources */,
+				8541A70E1C070FAA00B8BB2E /* NSString+NSStringMD5.m in Sources */,
 				859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */,
 				589FE1061C04ABA40043181D /* AppDelegate.m in Sources */,
 				8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */,

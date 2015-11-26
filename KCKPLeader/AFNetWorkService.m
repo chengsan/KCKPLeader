@@ -17,8 +17,7 @@
 
 -(void)requestWithServiceIP:(NSString *) serviceIP ServiceName:(NSString *)serviceName params:(NSMutableDictionary *)params httpMethod:(NSString *)httpMethod resultIsDictionary:(BOOL)resultIsDictionary completeBlock:(RequestCompelete)block
 {
-    
-    
+    //http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/
     //拼接URL
     NSString *url = [NSString stringWithFormat:@"%@%@/query",serviceIP,serviceName];
     
@@ -36,30 +35,30 @@
     //设置相应内容类型
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/html",@"text/plain",@"text/javascript",nil];
 
-//    NSArray *array = [params allKeys];
-//    if(array.count != 0)
-//    {
-//        for (int  i = 0; i < array.count; i++)
-//        {
-//            NSString *key = array[i];
-//            id object = [params objectForKey:key];
-//            
-//            //判断参数类型
-//            if([object isKindOfClass:[NSNumber class]])
-//            {
-//                
-//            }
-//            else if([object isKindOfClass:[NSString class]])
-//            {
-//                
-//            }
-//            else
-//            {
-//                NSString *string = [self objectToJson:object];
-//                [params setValue:string forKey:key];
-//            }
-//        }
-//    }
+    NSArray *array = [params allKeys];
+    if(array.count != 0)
+    {
+        for (int  i = 0; i < array.count; i++)
+        {
+            NSString *key = array[i];
+            id object = [params objectForKey:key];
+            
+            //判断参数类型
+            if([object isKindOfClass:[NSNumber class]])
+            {
+                
+            }
+            else if([object isKindOfClass:[NSString class]])
+            {
+                
+            }
+            else
+            {
+                NSString *string = [self objectToJson:object];
+                [params setValue:string forKey:key];
+            }
+        }
+    }
 
     
     //处理POST的参数

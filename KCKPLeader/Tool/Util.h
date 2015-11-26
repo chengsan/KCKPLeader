@@ -13,4 +13,6 @@
 +(CGFloat)getUIScreenHeight;
 +(float)getVersion;
 +(int)getStatusBarHeight;
+
++ (NSString*)objectToJson:(NSObject *)object;
 @end

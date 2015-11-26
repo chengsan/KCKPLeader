@@ -26,4 +26,11 @@
 {
     return [[UIApplication sharedApplication] statusBarFrame].size.height;
 }
+
++ (NSString*)objectToJson:(NSObject *)object
+{
+    NSError *parseError = nil;
+    NSData  *jsonData = [NSJSONSerialization dataWithJSONObject:object options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
 @end

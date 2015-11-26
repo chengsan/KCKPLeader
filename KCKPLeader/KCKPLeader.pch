@@ -20,13 +20,17 @@
 #import "EPNaviController.h"
 #import "EPTabBarController.h"
 #import "AFNetWorkService.h"
+#import "UIViewExt.h"
+#import "Util.h"
+#import "Globle.h"
+#import "NSString+NSStringMD5.h"
 #define NAVICOLOR [UIColor colorWithRed:46/255.0 green:117/255.0 blue:254/255.0 alpha:1.0]
 
 //正式地址：http://fjisip.yxybb.com/
 //测试地址：http://211.154.145.81:977/
 //周文海：http://192.168.20.134:8080/BBTone/
-#define ServiceURL [NSString stringWithFormat:@"%@",@"http://211.154.145.81:977/"];
-#define UpdateURL [NSString stringWithFormat:@"%@",@"http://fjisip.yxybb.com/"];
+#define ServiceURL @"http://220.231.252.14/restservices/lcipapp/"
+#define UpdateURL @"http://fjisip.yxybb.com/"
 
 
 //获取设备的物理高度

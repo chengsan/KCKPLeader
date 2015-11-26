@@ -19,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view from its nib.
     self.view.backgroundColor = NAVICOLOR;
     self.navigationController.navigationBarHidden = YES;
@@ -28,32 +29,64 @@
     self.loginBtn.layer.borderWidth = 1.0;
     
     
-    
-//    [self loadDataWith:userName andWith:passWord];
+    [self loadData];
 }
+
+-(void)loadData
+{
+    
+//    NSString *name = @"decanpol";
+//    NSString *pass = [@"888888a" md5];
+//    NSMutableDictionary *bean = [[NSMutableDictionary alloc] init];
+//    [bean setValue:name forKey:@"username"];
+//    [bean setValue:pass forKey:@"userpwd"];
+//    
+//    [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnapplogin" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
+//        
+//        NSLog(@"%@",result);
+//        
+//    } ];
+    
+    NSString *name = @"decanins";
+//    NSString *pass = [@"888888a" md5];
+    NSString *pass = @"F11351A8B0D7483AEBCE6CBD7679F33A";
+    NSMutableDictionary *bean = [[NSMutableDictionary alloc] init];
+    
+    NSMutableDictionary *childBean = [[NSMutableDictionary alloc] init];
+    [childBean setValue:@"decanins" forKey:@"username"];
+    [childBean setValue:[@"888888a" md5] forKey:@"userpwd"];
+    [childBean setValue:@"F11351A8B0D7483AEBCE6CBD7679F33A" forKey:@"userpwd"];
+    [bean setValue:childBean forKey:@"user"];
+    childBean = nil;
+    
+    [bean setValue:name forKey:@"username"];
+    [bean setValue:pass forKey:@"password"];
+    
+    //该值时一个定值
+    
+    NSString *ServiceUrl = @"http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/";
+    
+    [[Globle getInstance].service requestWithServiceIP:ServiceUrl ServiceName:@"DecAnapplogin" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
+     
+        NSString *str = [Util objectToJson:result];
+        NSLog(@"%@",str);
+        
+    } ];
+    
+}
+
+
 
 //隐藏状态栏
 -(BOOL)prefersStatusBarHidden{
     return YES;
 }
 
-//-(void)loadDataWith:(NSString *)userName andWith:(NSString *)passWord{
-//    AFNetWorkService *service = [[AFNetWorkService alloc] init];
-//    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"username":@"decanins",@"userpwd":@"888888a"}];
-//    [service requestWithServiceName:@"DecAnapplogin" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
-//        
-//        NSLog(@"%@",result);
-//        
-//    }];
-//    
-//}
 
 -(void)presentHomePage{
+    
     UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    EPTabBarController *vc = [EPTabBarController ];
-//    [self.navigationController pushViewController:vc animated:YES];
     self.view.window.rootViewController=[s instantiateInitialViewController];
-//    [self presentViewController: animated:YES completion:nil];
     
 }
 
