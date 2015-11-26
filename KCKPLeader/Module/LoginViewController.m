@@ -29,7 +29,7 @@
     
     
     
-    [self loadDataWith:userName andWith:passWord];
+//    [self loadDataWith:userName andWith:passWord];
 }
 
 //隐藏状态栏
@@ -37,16 +37,16 @@
     return YES;
 }
 
--(void)loadDataWith:(NSString *)userName andWith:(NSString *)passWord{
-    AFNetWorkService *service = [[AFNetWorkService alloc] init];
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"username":@"decanins",@"userpwd":@"888888a"}];
-    [service requestWithServiceName:@"DecAnapplogin" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
-        
-        NSLog(@"%@",result);
-        
-    }];
-    
-}
+//-(void)loadDataWith:(NSString *)userName andWith:(NSString *)passWord{
+//    AFNetWorkService *service = [[AFNetWorkService alloc] init];
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:@{@"username":@"decanins",@"userpwd":@"888888a"}];
+//    [service requestWithServiceName:@"DecAnapplogin" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
+//        
+//        NSLog(@"%@",result);
+//        
+//    }];
+//    
+//}
 
 -(void)presentHomePage{
     UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

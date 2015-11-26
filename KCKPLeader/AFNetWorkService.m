@@ -14,18 +14,13 @@
 #import "AFURLSessionManager.h"
 
 @implementation AFNetWorkService
-//http://220.231.252.14/restservices/lcipapp/方法名/query
 
--(void)requestWithServiceName:(NSString *)serviceName
-               params:(NSMutableDictionary *)params
-               httpMethod:(NSString *)httpMethod
-               resultIsDictionary:(BOOL)resultIsDictionary
-               completeBlock:(RequestCompelete)block
+-(void)requestWithServiceIP:(NSString *) serviceIP ServiceName:(NSString *)serviceName params:(NSMutableDictionary *)params httpMethod:(NSString *)httpMethod resultIsDictionary:(BOOL)resultIsDictionary completeBlock:(RequestCompelete)block
 {
     
     
     //拼接URL
-    NSString *url = [NSString stringWithFormat:@"%@restservices/lcipapp/%@/query",[Globle getInstance].serviceURL,serviceName];
+    NSString *url = [NSString stringWithFormat:@"%@%@/query",serviceIP,serviceName];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     if(!resultIsDictionary)
