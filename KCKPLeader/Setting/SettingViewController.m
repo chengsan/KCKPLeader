@@ -11,6 +11,7 @@
 #import "UserNameViewController.h"
 #import "PhoneBindingViewController.h"
 #import "ChangePassWordViewController.h"
+#import "LoginViewController.h"
 @interface SettingViewController ()
 
 @end
@@ -58,14 +59,23 @@
         if (indexPath.row == 0) {
             cell.icon.image = [UIImage imageNamed:@"ico20"];
             cell.titleLab.text = @"用户名";
-            
-            cell.rightLab.text = @"Longrise";
+            NSString *currentUserName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+//            NSLog(@"%@",currentUserName);
+            cell.rightLab.text = currentUserName;
             cell.rightLab.textColor = [UIColor grayColor];
         }
         else if (indexPath.row == 1) {
             cell.icon.image = [UIImage imageNamed:@"ico21"];
             cell.titleLab.text = @"手机";
-            cell.rightLab.text = @"13888888888";
+            
+            NSString *currentPhoneNum;
+            if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"phone"] isKindOfClass:[NSString class]]) {
+                
+                currentPhoneNum = [[NSUserDefaults standardUserDefaults] objectForKey:@"phone"];
+                
+            }
+            
+            cell.rightLab.text = currentPhoneNum;
             cell.rightLab.textColor = [UIColor grayColor];
         }
         else {
@@ -91,7 +101,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 49;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -101,12 +111,13 @@
     if (indexPath.section == 0) {
         UIViewController *vc;
         if (indexPath.row == 0) {
-            vc = [UserNameViewController new];
-            vc.title = @"用户名";
+//            vc = [UserNameViewController new];
+//            vc.title = @"用户名";
+            return;
         }
         else if (indexPath.row == 1){
             vc = (PhoneBindingViewController *)[PhoneBindingViewController new];
-            if ([cell.rightLab.text isEqualToString:@""]) {
+            if (cell.rightLab.text == NULL) {
                 vc.title = @"绑定手机";
             }
             else{
@@ -124,9 +135,17 @@
         
         if (indexPath.row == 0) {
             
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"清除成功" message:@"" delegate:self cancelButtonTitle:@"确定" otherButtonTitles: nil];
+            [alert show];
+            
+            
         }
         else{
             
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.labelText = @"正在退出";
+            UIStoryboard *loginStoryboard=[UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            [self presentViewController:[loginStoryboard instantiateInitialViewController] animated:YES completion:nil];
         }
     }
 }

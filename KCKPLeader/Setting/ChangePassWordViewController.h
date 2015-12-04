@@ -10,4 +10,11 @@
 
 @interface ChangePassWordViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *passOld;
+
+@property (weak, nonatomic) IBOutlet UITextField *passNew;
+
+@property (weak, nonatomic) IBOutlet UITextField *repeatNew;
+
+@property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 @end

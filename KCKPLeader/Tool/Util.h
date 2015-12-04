@@ -15,4 +15,6 @@
 +(int)getStatusBarHeight;
 
 + (NSString*)objectToJson:(NSObject *)object;
++(BOOL) isValidateMobile:(NSString *)mobile;
++(BOOL)isValidateEmail:(NSString *)email;
 @end

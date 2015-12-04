@@ -22,9 +22,20 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    
+    if(ScreenHeight != 568){
+        myDelegate.autoSizeScaleX = ScreenWidth/320;
+        myDelegate.autoSizeScaleY = ScreenHeight/568;
+    }
+    else{
+        myDelegate.autoSizeScaleX = 1.0;
+        myDelegate.autoSizeScaleY = 1.0;
+    }
+    
     UIStoryboard *loginStoryboard=[UIStoryboard storyboardWithName:@"Login" bundle:nil];
     
-//    UIStoryboard *mainStoryboard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     self.window.rootViewController=[loginStoryboard instantiateInitialViewController];
     
@@ -51,6 +62,31 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//storyBoard view自动适配
+
++ (void)storyBoradAutoLay:(UIView *)allView
+{
+    for (UIView *temp in allView.subviews) {
+        temp.frame = CGRectMake1(temp.frame.origin.x, temp.frame.origin.y, temp.frame.size.width, temp.frame.size.height);
+//        for (UIView *temp1 in temp.subviews) {
+//            temp1.frame = CGRectMake1(temp1.frame.origin.x, temp1.frame.origin.y, temp1.frame.size.width, temp1.frame.size.height);
+//        }
+    }
+}
+
+
+CG_INLINE CGRect//注意：这里的代码要放在.m文件最下面的位置
+CGRectMake1(CGFloat x, CGFloat y, CGFloat width, CGFloat height)
+{
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    CGRect rect;
+    rect.origin.x = x * myDelegate.autoSizeScaleX;
+    rect.origin.y = y * myDelegate.autoSizeScaleY;
+    rect.size.width = width * myDelegate.autoSizeScaleX;
+    rect.size.height = height * myDelegate.autoSizeScaleY;
+    return rect;
 }
 
 @end

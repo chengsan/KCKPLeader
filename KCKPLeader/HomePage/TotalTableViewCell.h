@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppModel.h"
 @interface TotalTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *attentionLab;
 @property (weak, nonatomic) IBOutlet UILabel *installLab;
 
+-(void)setUiWithInfo:(AppModel *)model;
 @end

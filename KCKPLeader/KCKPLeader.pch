@@ -24,12 +24,28 @@
 #import "Util.h"
 #import "Globle.h"
 #import "NSString+NSStringMD5.h"
+#import <Masonry.h>
+#import <MMPlaceHolder.h>
+#import <Availability.h>
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <PNChart.h>
+#import <MBProgressHUD.h>
+#import "SectionView.h"
+#import "DESCript.h"
+#import <AFNetworking.h>
+#import "AppDelegate.h"
 #define NAVICOLOR [UIColor colorWithRed:46/255.0 green:117/255.0 blue:254/255.0 alpha:1.0]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#define FORMATSTR(str) [NSString stringWithFormat:@"%@/分钟",str]
+
 
 //正式地址：http://fjisip.yxybb.com/
 //测试地址：http://211.154.145.81:977/
 //周文海：http://192.168.20.134:8080/BBTone/
-#define ServiceURL @"http://220.231.252.14/restservices/lcipapp/"
+#define ServiceURL @"http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/"
+
 #define UpdateURL @"http://fjisip.yxybb.com/"
 
 

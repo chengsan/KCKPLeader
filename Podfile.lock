@@ -20,11 +20,26 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MMPlaceHolder (1.9)
+  - PNChart (0.8.7):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Masonry (~> 0.6.3)
+  - MBProgressHUD (~> 0.9.1)
+  - MMPlaceHolder (~> 1.9)
+  - PNChart (~> 0.8.7)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MMPlaceHolder: 40212b9dfe8760134b1b2fce3232f0d46200178f
+  PNChart: c1755716bbd45386d2035b2bf2ce73e6d3f8cb22
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
 COCOAPODS: 0.39.0

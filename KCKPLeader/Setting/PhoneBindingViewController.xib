@@ -11,7 +11,7 @@
                 <outlet property="confirmBtn" destination="GRG-Aq-Edc" id="BeS-yl-kET"/>
                 <outlet property="phoneField" destination="3gP-Zl-bym" id="khR-Cv-daY"/>
                 <outlet property="sengBtn" destination="2tl-Db-Rfp" id="PLy-fo-LOs"/>
-                <outlet property="view" destination="iN0-l3-epB" id="bzP-iD-n1a"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Lk8-Ue-kbU"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,13 +23,19 @@
                     <rect key="frame" x="28" y="25" width="449" height="30"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="1mC-l7-qu2"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入验证码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FyB-U0-iDn">
                     <rect key="frame" x="28" y="72" width="543" height="30"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="YjT-CY-5UI"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tl-Db-Rfp">
                     <rect key="frame" x="496" y="24" width="75" height="31"/>
@@ -37,7 +43,10 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="75" id="m2i-9Y-mvn"/>
                     </constraints>
-                    <state key="normal" title="发送验证码"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <state key="normal" title="发送验证码">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRG-Aq-Edc">
                     <rect key="frame" x="28" y="117" width="543" height="30"/>

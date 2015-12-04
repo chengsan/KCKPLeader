@@ -26,7 +26,6 @@
     titleAry = @[@"交通事故处理情况",@"理赔处理情况",@"保险公司处理情况"];
     imgAry = @[@"ico01",@"ico02",@"ico03"];
     
-    
     UINib *nib = [UINib nibWithNibName:@"ProcessSituationCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ProcessSituationCell"];
 }

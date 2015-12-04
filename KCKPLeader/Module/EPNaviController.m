@@ -19,8 +19,12 @@
     // Do any additional setup after loading the view.
     self.navigationBar.barTintColor = NAVICOLOR;
     self.navigationBar.translucent = NO;
+    
+    //改变返回按钮文字颜色为白色
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
      [self.navigationBar setTintColor:[UIColor whiteColor]];
+    
+    //隐藏返回按钮的文字
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
 }

@@ -7,8 +7,13 @@
 //
 
 #import "TotalTableViewCell.h"
-
 @implementation TotalTableViewCell
+
+-(void)setUiWithInfo:(AppModel *)model{
+    
+    self.attentionLab.text = model.data.downnum;
+    self.installLab.text = model.data.regnnum;
+}
 
 - (void)awakeFromNib {
     // Initialization code
