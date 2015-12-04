@@ -169,13 +169,11 @@
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:@"KCKP_Leader" forKey:@"appname"];
-    NSString *url = @"http://192.168.3.217:86/KCKP/restservices/kckpdecanrest/lbcp_getAppVersion/query";
+
     
-     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager POST:url parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
+    [[Globle getInstance].service requestWithServiceIP:UpdateURL ServiceName:@"DecAnSearchcasenum" params:params httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-//        NSString *jsonStr = ;
-        NSLog(@"检测更新%@",responseObject);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         //            NSDictionary *dic = result;
         //            NSString *localVersion = VersionCode;
@@ -201,11 +199,11 @@
         //            }else{
         //                [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = @"当前是最新版本";
         //            }
-        
-    } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
+
         
     }];
-        
+
+    
     
 }
 
@@ -214,6 +212,7 @@
 -(void)loadScrolData{
 
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchdayweekmonth" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
