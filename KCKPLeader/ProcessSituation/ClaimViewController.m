@@ -16,6 +16,8 @@
     NSString *passWord;
     NSMutableDictionary *bean;
     ClaimModel *model;
+    NSIndexPath *kIndexPath;
+    NSMutableArray *dataArray;
 
 }
 @end
@@ -25,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    dataArray = [NSMutableArray array];
     bean = [NSMutableDictionary dictionary];
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
     passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
@@ -34,6 +37,7 @@
     self.title = @"理赔处理情况";
     UINib *nib = [UINib nibWithNibName:@"ClaimSituationCellCell" bundle:nil];
     
+    self.tableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-64);
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ClaimSituationCellCell"];
     
     [self loadClaimData];
@@ -43,6 +47,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 #pragma mark - 加载理赔处理情况数据
 -(void)loadClaimData{
@@ -68,6 +75,7 @@
     
 }
 
+
 #pragma mark - table Delegate
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;
@@ -84,6 +92,7 @@
     ClaimSituationCellCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClaimSituationCellCell"];
     cell.icon.image = [UIImage imageNamed:imgAry[indexPath.section]];
     cell.titleLab.text = titleAry[indexPath.section];
+   
     switch (indexPath.section) {
         case 0:
             [cell setPicUIWithInfo:model];
@@ -104,7 +113,7 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 70.0;
+    return 150.0*ScreenHeight/568;
 }
 
 

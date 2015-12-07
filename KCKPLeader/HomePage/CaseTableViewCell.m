@@ -38,10 +38,12 @@
     self.todayBtn.layer.borderWidth = 1;
     self.todayBtn.layer.borderColor = NAVICOLOR.CGColor;
     self.todayBtn.backgroundColor = NAVICOLOR;
+    self.todayBtn.tag = 101;
     [self.todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     self.untilYesterdayBtn.layer.cornerRadius = 3;
     self.untilYesterdayBtn.layer.borderWidth = 1;
+    self.untilYesterdayBtn.tag = 102;
     self.untilYesterdayBtn.layer.borderColor = NAVICOLOR.CGColor;
 }
 

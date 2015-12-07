@@ -67,13 +67,16 @@
 
      NSLog(@"bean%@",bean);
 
+    
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnModifyUser" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
 
         NSString *str = [Util objectToJson:result];
         NSLog(@"手机绑定%@",str);
         NSDictionary *dic = result;
         NSString *restate = [dic objectForKey:@"restate"];
+        
         if ([restate isEqualToString:@"0"]) {
+            
             [[NSUserDefaults standardUserDefaults] setValue:phoneNum forKey:@"phone"];
             [[NSUserDefaults standardUserDefaults] synchronize];
         }
@@ -126,11 +129,16 @@
     [judgeBean setValue:currentUserName forKey:@"username"];
     [judgeBean setValue:passWord forKey:@"password"];
     
+    hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"正在验证...";
     NSLog(@"JudgeBean%@",judgeBean);
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnAppValCode" params:judgeBean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
         NSString *jsonStr = [Util objectToJson:result];
         NSLog(@"判断验证码%@",jsonStr);
+        NSDictionary *dic = result;
+        hud.labelText = [dic objectForKey:@"redes"];
+        [hud hide:YES afterDelay:2.0];
         
         if ([[result objectForKey:@"restate"] isEqualToString:@"0"]) {
             IsValid = YES;

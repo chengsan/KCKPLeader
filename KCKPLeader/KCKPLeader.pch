@@ -44,10 +44,13 @@
 //正式地址：http://fjisip.yxybb.com/
 //测试地址：http://211.154.145.81:977/
 //周文海：http://192.168.20.134:8080/BBTone/
-#define ServiceURL @"http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/"
+//#define ServiceURL @"http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/"
+#define ServiceURL @"http://202.43.147.35/restservices/kckpjcfsrest/"
 
-#define UpdateURL @"http://192.168.3.217:86/KCKP/restservices/kckpdecanrest/"
+//#define UpdateURL @"http://192.168.3.217:86/KCKP/restservices/kckpdecanrest/"
+#define UpdateURL @"http://202.43.147.35/restservices/kckpdecanrest/"
 
+#define VersionCode @"1"
 
 //获取设备的物理高度
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height

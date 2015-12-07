@@ -12,34 +12,57 @@
 
 -(void)setPicUIWithInfo:(ClaimModel *)model{
     
-    self.oneLab.text = model.data.picnum.onenum;
-    self.moreLab.text = model.data.picnum.mannum;
-    self.totalLab.text = model.data.picnum.allnum;
+    self.oneLab.text   = model.data.daypicnum.onenum;
+    self.moreLab.text  = model.data.daypicnum.mannum;
+    self.totalLab.text = model.data.daypicnum.allnum;
+    
+    self.yesOneLab.text   = model.data.picnum.onenum;
+    self.yesMoreLab.text  = model.data.picnum.mannum;
+    self.yesTotalLab.text = model.data.picnum.allnum;
 }
 
 -(void)setDutUIWithInfo:(ClaimModel *)model{
 
-    self.oneLab.text = model.data.dutnum.onenum;
-    self.moreLab.text = model.data.dutnum.mannum;
-    self.totalLab.text = model.data.dutnum.allnum;
+    self.oneLab.text   = model.data.daydutnum.onenum;
+    self.moreLab.text  = model.data.daydutnum.mannum;
+    self.totalLab.text = model.data.daydutnum.allnum;
+    
+    self.yesOneLab.text   = model.data.dutnum.onenum;
+    self.yesMoreLab.text  = model.data.dutnum.mannum;
+    self.yesTotalLab.text = model.data.dutnum.allnum;
 }
 -(void)setInsUIWithInfo:(ClaimModel *)model{
 
-    self.oneLab.text = model.data.insnum.onenum;
-    self.moreLab.text = model.data.insnum.mannum;
-    self.totalLab.text = model.data.insnum.allnum;
+    self.oneLab.text   = model.data.dayinsnum.onenum;
+    self.moreLab.text  = model.data.dayinsnum.mannum;
+    self.totalLab.text = model.data.dayinsnum.allnum;
+    
+    self.yesOneLab.text   = model.data.insnum.onenum;
+    self.yesMoreLab.text  = model.data.insnum.mannum;
+    self.yesTotalLab.text = model.data.insnum.allnum;
 }
 
 -(void)setCpsUIWithInfo:(ClaimModel *)model{
 
-    self.oneLab.text = model.data.cpsnum.onenum;
-    self.moreLab.text = model.data.cpsnum.mannum;
-    self.totalLab.text = model.data.cpsnum.allnum;
+    self.oneLab.text   = model.data.daycpsnum.onenum;
+    self.moreLab.text  = model.data.daycpsnum.mannum;
+    self.totalLab.text = model.data.daycpsnum.allnum;
+    
+    self.yesOneLab.text   = model.data.cpsnum.onenum;
+    self.yesMoreLab.text  = model.data.cpsnum.mannum;
+    self.yesTotalLab.text = model.data.cpsnum.allnum;
 }
+
+
+
+
 
 - (void)awakeFromNib {
     // Initialization code
+    [AppDelegate storyBoradAutoLay:self];
+    
     self.selectionStyle = UITableViewCellEditingStyleNone;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

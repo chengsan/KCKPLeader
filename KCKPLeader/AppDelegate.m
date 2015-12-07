@@ -70,9 +70,9 @@
 {
     for (UIView *temp in allView.subviews) {
         temp.frame = CGRectMake1(temp.frame.origin.x, temp.frame.origin.y, temp.frame.size.width, temp.frame.size.height);
-//        for (UIView *temp1 in temp.subviews) {
-//            temp1.frame = CGRectMake1(temp1.frame.origin.x, temp1.frame.origin.y, temp1.frame.size.width, temp1.frame.size.height);
-//        }
+        for (UIView *temp1 in temp.subviews) {
+            temp1.frame = CGRectMake1(temp1.frame.origin.x, temp1.frame.origin.y, temp1.frame.size.width, temp1.frame.size.height);
+        }
     }
 }
 

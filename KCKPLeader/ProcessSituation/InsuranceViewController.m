@@ -163,7 +163,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.tableView) {
-        return 155;
+        return 155*ScreenHeight/568;
     }
     else{
         return 35;

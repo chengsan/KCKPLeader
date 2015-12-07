@@ -22,6 +22,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [AppDelegate storyBoradAutoLay:self];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

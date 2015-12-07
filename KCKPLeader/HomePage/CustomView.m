@@ -37,7 +37,7 @@
         self.todayLab.center = self.todayChartV.center;
         self.todayLab.textColor = RGBA(249, 144, 0, 1.0);
         self.todayLab.textAlignment = NSTextAlignmentCenter;
-        self.todayLab.text = @"2/天";
+        self.todayLab.text = @"";
         self.todayLab.font = [UIFont systemFontOfSize:12];
         [self addSubview:_todayLab];
         
@@ -55,7 +55,7 @@
         self.weekLab.center = self.weekChartV.center;
         self.weekLab.textColor = RGBA(49, 120, 255, 1.0);
         self.weekLab.textAlignment = NSTextAlignmentCenter;
-        self.weekLab.text = @"2/天";
+        self.weekLab.text = @"";
         self.weekLab.font = [UIFont systemFontOfSize:12];
         [self addSubview:_weekLab];
         
@@ -73,7 +73,7 @@
         self.monthLab.center = self.monthChartV.center;
         self.monthLab.textColor = RGBA(111, 171, 0, 1.0);
         self.monthLab.textAlignment = NSTextAlignmentCenter;
-        self.monthLab.text = @"2/天";
+        self.monthLab.text = @"";
         self.monthLab.font = [UIFont systemFontOfSize:12];
         [self addSubview:_monthLab];
         

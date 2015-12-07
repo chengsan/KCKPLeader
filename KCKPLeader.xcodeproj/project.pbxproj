@@ -18,6 +18,10 @@
 		589FE1351C04AE5C0043181D /* SearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1301C04AE5C0043181D /* SearchParameters.m */; };
 		589FE1381C04AEB30043181D /* AFNetWorkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1371C04AEB30043181D /* AFNetWorkService.m */; };
 		853D73291C09CAC20011429E /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 853D73281C09CAC20011429E /* CustomView.m */; };
+		853DB5191C155348003F5BBA /* DayPicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 853DB5181C155348003F5BBA /* DayPicModel.m */; };
+		853DB51C1C15535F003F5BBA /* DayDutModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 853DB51B1C15535F003F5BBA /* DayDutModel.m */; };
+		853DB51F1C155370003F5BBA /* DayInsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 853DB51E1C155370003F5BBA /* DayInsModel.m */; };
+		853DB5221C15539B003F5BBA /* DayCpsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 853DB5211C15539B003F5BBA /* DayCpsModel.m */; };
 		8541A6F71C06A45D00B8BB2E /* ChangePassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A6F51C06A45D00B8BB2E /* ChangePassWordViewController.m */; };
 		8541A6FA1C06B15300B8BB2E /* PhoneBindingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8541A6F91C06B15300B8BB2E /* PhoneBindingViewController.xib */; };
 		8541A7001C06D23200B8BB2E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8541A6FE1C06D23200B8BB2E /* LoginViewController.m */; };
@@ -89,6 +93,7 @@
 		85A6CD6B1C0C24DA001AEEDE /* ClaimDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85A6CD6A1C0C24DA001AEEDE /* ClaimDetailViewController.xib */; };
 		85AB10631C117AF300DC130D /* ClaimTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AB10611C117AF300DC130D /* ClaimTotalCell.m */; };
 		85AB10641C117AF300DC130D /* ClaimTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85AB10621C117AF300DC130D /* ClaimTotalCell.xib */; };
+		85AB10671C11BA9700DC130D /* AppVerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85AB10661C11BA9700DC130D /* AppVerModel.m */; };
 		85BF74E71C0E803900B80CAD /* DetachmentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF74E61C0E803900B80CAD /* DetachmentModel.m */; };
 		85BF74EA1C0E849D00B80CAD /* DetDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF74E91C0E849D00B80CAD /* DetDataModel.m */; };
 		85BF74ED1C0EC31000B80CAD /* ClaimModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BF74EC1C0EC31000B80CAD /* ClaimModel.m */; };
@@ -142,6 +147,14 @@
 		7C2A74D23C2B0CB472982814 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		853D73271C09CAC20011429E /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
 		853D73281C09CAC20011429E /* CustomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		853DB5171C155348003F5BBA /* DayPicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayPicModel.h; sourceTree = "<group>"; };
+		853DB5181C155348003F5BBA /* DayPicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayPicModel.m; sourceTree = "<group>"; };
+		853DB51A1C15535F003F5BBA /* DayDutModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayDutModel.h; sourceTree = "<group>"; };
+		853DB51B1C15535F003F5BBA /* DayDutModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayDutModel.m; sourceTree = "<group>"; };
+		853DB51D1C155370003F5BBA /* DayInsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayInsModel.h; sourceTree = "<group>"; };
+		853DB51E1C155370003F5BBA /* DayInsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayInsModel.m; sourceTree = "<group>"; };
+		853DB5201C15539B003F5BBA /* DayCpsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayCpsModel.h; sourceTree = "<group>"; };
+		853DB5211C15539B003F5BBA /* DayCpsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayCpsModel.m; sourceTree = "<group>"; };
 		8541A6F41C06A45D00B8BB2E /* ChangePassWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePassWordViewController.h; sourceTree = "<group>"; };
 		8541A6F51C06A45D00B8BB2E /* ChangePassWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePassWordViewController.m; sourceTree = "<group>"; };
 		8541A6F91C06B15300B8BB2E /* PhoneBindingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhoneBindingViewController.xib; sourceTree = "<group>"; };
@@ -271,6 +284,8 @@
 		85AB10601C117AF300DC130D /* ClaimTotalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaimTotalCell.h; sourceTree = "<group>"; };
 		85AB10611C117AF300DC130D /* ClaimTotalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaimTotalCell.m; sourceTree = "<group>"; };
 		85AB10621C117AF300DC130D /* ClaimTotalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClaimTotalCell.xib; sourceTree = "<group>"; };
+		85AB10651C11BA9700DC130D /* AppVerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppVerModel.h; sourceTree = "<group>"; };
+		85AB10661C11BA9700DC130D /* AppVerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppVerModel.m; sourceTree = "<group>"; };
 		85BF74E51C0E803900B80CAD /* DetachmentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetachmentModel.h; sourceTree = "<group>"; };
 		85BF74E61C0E803900B80CAD /* DetachmentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetachmentModel.m; sourceTree = "<group>"; };
 		85BF74E81C0E849D00B80CAD /* DetDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetDataModel.h; sourceTree = "<group>"; };
@@ -637,6 +652,8 @@
 				8546D15D1C0DBCB300317CFA /* AppModel.m */,
 				8546D15F1C0DBCBE00317CFA /* AppDataModel.h */,
 				8546D1601C0DBCBE00317CFA /* AppDataModel.m */,
+				85AB10651C11BA9700DC130D /* AppVerModel.h */,
+				85AB10661C11BA9700DC130D /* AppVerModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -654,12 +671,20 @@
 				85BF74F21C0EC33900B80CAD /* ClaimDataModel.m */,
 				85BF74F41C0EC34E00B80CAD /* PicModel.h */,
 				85BF74F51C0EC34E00B80CAD /* PicModel.m */,
+				853DB5171C155348003F5BBA /* DayPicModel.h */,
+				853DB5181C155348003F5BBA /* DayPicModel.m */,
 				85BF74FD1C0EC38B00B80CAD /* DutModel.h */,
 				85BF74FE1C0EC38B00B80CAD /* DutModel.m */,
+				853DB51A1C15535F003F5BBA /* DayDutModel.h */,
+				853DB51B1C15535F003F5BBA /* DayDutModel.m */,
 				85BF74FA1C0EC37600B80CAD /* InsModel.h */,
 				85BF74FB1C0EC37600B80CAD /* InsModel.m */,
+				853DB51D1C155370003F5BBA /* DayInsModel.h */,
+				853DB51E1C155370003F5BBA /* DayInsModel.m */,
 				85BF75001C0EC39E00B80CAD /* CpsModel.h */,
 				85BF75011C0EC39E00B80CAD /* CpsModel.m */,
+				853DB5201C15539B003F5BBA /* DayCpsModel.h */,
+				853DB5211C15539B003F5BBA /* DayCpsModel.m */,
 				85BF75091C0ECBF200B80CAD /* InsDataModel.h */,
 				85BF750A1C0ECBF200B80CAD /* InsDataModel.m */,
 				85BF75061C0EC9D300B80CAD /* CompanyModel.h */,
@@ -936,6 +961,7 @@
 				85BF750E1C0ED25700B80CAD /* ClaimDetailModel.m in Sources */,
 				859067691C055D8500E9E15E /* BaseViewController.m in Sources */,
 				859DB1A91C0851F4005602C6 /* DataStatisticsCell.m in Sources */,
+				853DB5221C15539B003F5BBA /* DayCpsModel.m in Sources */,
 				8546D1521C0D966F00317CFA /* DataModel.m in Sources */,
 				85BF74FC1C0EC37600B80CAD /* InsModel.m in Sources */,
 				859067B51C05AFFC00E9E15E /* TimeViewController.m in Sources */,
@@ -943,6 +969,7 @@
 				8590677A1C055D8D00E9E15E /* ProcessSituationViewController.m in Sources */,
 				85BF74ED1C0EC31000B80CAD /* ClaimModel.m in Sources */,
 				859067AF1C05AFA600E9E15E /* ClaimDetailViewController.m in Sources */,
+				853DB5191C155348003F5BBA /* DayPicModel.m in Sources */,
 				853D73291C09CAC20011429E /* CustomView.m in Sources */,
 				589FE1341C04AE5C0043181D /* QueryParameter.m in Sources */,
 				859067931C0586F200E9E15E /* CaseTableViewCell.m in Sources */,
@@ -957,6 +984,7 @@
 				8541A7101C070FAA00B8BB2E /* Util.m in Sources */,
 				8546D11A1C0D762700317CFA /* GTMBase64.m in Sources */,
 				8590677E1C055E0600E9E15E /* HMSegmentedControl.m in Sources */,
+				85AB10671C11BA9700DC130D /* AppVerModel.m in Sources */,
 				85BF74E71C0E803900B80CAD /* DetachmentModel.m in Sources */,
 				8590679D1C059E9C00E9E15E /* ProcessSituationCell.m in Sources */,
 				85BF75081C0EC9D300B80CAD /* CompanyModel.m in Sources */,
@@ -992,6 +1020,7 @@
 				859DB1A01C083E8D005602C6 /* JSONValueTransformer.m in Sources */,
 				859DB1A41C084633005602C6 /* ClaimSituationCellCell.m in Sources */,
 				8546D1431C0D955E00317CFA /* VolnumModel.m in Sources */,
+				853DB51C1C15535F003F5BBA /* DayDutModel.m in Sources */,
 				859DB19E1C083E8D005602C6 /* JSONModel+networking.m in Sources */,
 				8546D15E1C0DBCB300317CFA /* AppModel.m in Sources */,
 				8590677B1C055D8D00E9E15E /* SettingViewController.m in Sources */,
@@ -1000,6 +1029,7 @@
 				85BF75021C0EC39E00B80CAD /* CpsModel.m in Sources */,
 				859DB19A1C083E8D005602C6 /* JSONModelError.m in Sources */,
 				85BF750B1C0ECBF200B80CAD /* InsDataModel.m in Sources */,
+				853DB51F1C155370003F5BBA /* DayInsModel.m in Sources */,
 				8541A7001C06D23200B8BB2E /* LoginViewController.m in Sources */,
 				859DB1981C083E8D005602C6 /* JSONModelArray.m in Sources */,
 			);
@@ -1072,7 +1102,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1109,7 +1139,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -1122,14 +1152,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xiaohuan yuan (S328DGVJYB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 415391360@qq.com (V3GADZ5M83)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 415391360@qq.com (V3GADZ5M83)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "759e4103-7317-4431-b3f9-ee1c4adc8027";
 			};
 			name = Debug;
 		};
@@ -1139,14 +1170,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: xiaohuan yuan (S328DGVJYB)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: 415391360@qq.com (V3GADZ5M83)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: 415391360@qq.com (V3GADZ5M83)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.longrise.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "759e4103-7317-4431-b3f9-ee1c4adc8027";
 			};
 			name = Release;
 		};

@@ -16,6 +16,7 @@
 #import "AppModel.h"
 #import "ClaimTotalCell.h"
 #import "InsuranceViewController.h"
+#import "AppVerModel.h"
 @interface HomePageViewController ()<UIScrollViewDelegate>
 
 {
@@ -28,6 +29,10 @@
     CustomView *cus4;
     
     NSNumber *totlaCount;
+    AppVerModel *verModel;
+    NSString *localVersion;
+    NSString *serverVersion;
+    NSString *remark;
 }
 
 @property (nonatomic, strong) HMSegmentedControl *segmentControl;
@@ -35,6 +40,7 @@
 @property (nonatomic, strong) CaseModel *model;
 @property (nonatomic, strong) ScrollModel *scrModel;
 @property (nonatomic, strong) AppModel *appModel;
+@property (nonatomic, strong) UIAlertView *alertView;
 
 @end
 
@@ -69,6 +75,8 @@
     [self loadAppData];
     
     [self loadClaimToalCountData];
+    
+    [self checkVersion];
 }
 
 #pragma mark - 初始化segment
@@ -168,54 +176,81 @@
 -(void)checkVersion{
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-    [params setValue:@"KCKP_Leader" forKey:@"appname"];
+    [params setValue:@"KCKP_Leader" forKey:@"arg1"];
 
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"正在检查更新...";
     
-    [[Globle getInstance].service requestWithServiceIP:UpdateURL ServiceName:@"DecAnSearchcasenum" params:params httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
-        
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
-        
-        //            NSDictionary *dic = result;
-        //            NSString *localVersion = VersionCode;
-        //            NSLog(@"当前版本号%@",localVersion);
-        //            int localVersionNUm = (localVersion == nil ? -1 : [localVersion intValue]);
-        //            //获取服务器版本
-        //            NSString *serverVersion = [dic valueForKey:@"appversion"];
-        //            int serverVersionNum = (serverVersion == nil ? -1 : [serverVersion intValue]);
-        //            //判断是非升级
-        //            if(localVersionNUm < serverVersionNum)
-        //            {
-        //                NSString *upgrade = [dic valueForKey:@"upgrade"];
-        //                if([@"1" isEqualToString:upgrade])    //   强制升级
-        //                {
-        //                    self.alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"有新的版本，请及时更新。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-        //                }
-        //                else     //  自选升级
-        //                {
-        //                    self.alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"有新的版本，请及时更新。" delegate:self cancelButtonTitle: nil otherButtonTitles:@"确定",@"取消",nil];
-        //                }
-        //                [self.alertView show];
-        //
-        //            }else{
-        //                [MBProgressHUD showHUDAddedTo:self.view animated:YES].labelText = @"当前是最新版本";
-        //            }
+    [[Globle getInstance].service requestWithServiceIP:UpdateURL ServiceName:@"lbcp_getAppVersion" params:params httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
 
+        [hud hide:YES afterDelay:1.0];
         
+        if (nil != result) {
+            NSString *jsonStr = [Util objectToJson:result];
+            NSLog(@"版本检测%@",jsonStr);
+            verModel = [[AppVerModel alloc]initWithString:jsonStr error:nil];
+//            verModel.appversion;
+//            verModel.upgrade
+//            verModel.remarks
+            remark = verModel.remarks;
+
+            localVersion = VersionCode;
+            NSLog(@"当前版本号%@",verModel.appversion);
+            int localVersionNUm = (localVersion == nil ? -1 : [localVersion intValue]);
+            
+            //获取服务器版本
+            serverVersion = verModel.appversion;
+            int serverVersionNum = (serverVersion == nil ? -1 : [serverVersion intValue]);
+            //判断是非升级
+            if(localVersionNUm < serverVersionNum)
+            {
+                NSString *upgrade = verModel.upgrade;
+                if([@"1" isEqualToString:upgrade])    //   强制升级
+                {
+                    self.alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"有新的版本，请及时更新。" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                }
+                else     //  自选升级
+                {
+                    self.alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"有新的版本，请及时更新。" delegate:self cancelButtonTitle: nil otherButtonTitles:@"确定",@"取消",nil];
+                }
+                [self.alertView show];
+
+            }else{
+            
+            }
+        }
+
     }];
-
-    
     
 }
 
+#pragma mark - UIAlertView delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView == self.alertView)
+    {
+        if(buttonIndex == 0)
+        {
+    
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:remark]];
+            
+        }
+        
+        //        long oldTime = (long)[Util getValue:@"systemTime"];
+        //        oldTime = oldTime + 24*60*60*1000;
+        //        [Util setObject:[[NSNumber alloc] initWithLong:oldTime] key:@"systemTime"];
+    }
+}
 
 #pragma mark - 加载顶部scroll数据
 -(void)loadScrolData{
 
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchdayweekmonth" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
@@ -247,17 +282,19 @@
 }
 
 
+
+
 #pragma mark - 加载统计案件数量的数据
 //根据type加载数据 1为今天 2为截止昨天
 -(void)loadCaseDataWithType1{
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:bean];
     [dic setValue:@"1" forKey:@"type"];
     NSLog(@"1");
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchcasenum" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
@@ -274,15 +311,16 @@
     
 }
 
+
 -(void)loadCaseDataWithType2{
     
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:bean];
     [dic setValue:@"2" forKey:@"type"];
     NSLog(@"2");
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchcasenum" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
             NSLog(@"YesterdayResult:%@",jsonStr);
@@ -329,7 +367,7 @@
     
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnAppData" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
@@ -368,8 +406,6 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.line.backgroundColor = NAVICOLOR;
         [cell.todayBtn addTarget:self action:@selector(loadCaseDataWithType1) forControlEvents:UIControlEventTouchUpInside];
-//        [cell.todayBtn addTarget:self action:@selector(checkVersion) forControlEvents:UIControlEventTouchUpInside];
-        
         [cell.untilYesterdayBtn addTarget:self action:@selector(loadCaseDataWithType2) forControlEvents:UIControlEventTouchUpInside];
         [cell setUIWithInfo:self.model];
         return cell;

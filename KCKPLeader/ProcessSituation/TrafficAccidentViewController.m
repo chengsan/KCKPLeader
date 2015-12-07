@@ -82,7 +82,6 @@
             model = [[DetachmentModel alloc]initWithString:jsonStr error:nil];
             for (DetDataModel *data in model.data) {
                 
-                
                 [self.data addObject:data];
             }
 //
@@ -101,20 +100,18 @@
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [detailBean setValue:type forKey:@"type"];
-    
+    detailModel = nil;
+    [self.tableView reloadData];
     NSLog(@"detailBean%@",detailBean);
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnAreainfo" params:detailBean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
             NSLog(@"Detail:%@",jsonStr);
             
             detailModel = [[CaseModel alloc]initWithString:jsonStr error:nil];
-        
-//            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:index];
-//            NSArray *indexPathAry = @[indexPath];
-//            [self.tableView reloadRowsAtIndexPaths:indexPathAry withRowAnimation:UITableViewRowAnimationFade];
+
             [self.tableView reloadData];
         }
         else{
@@ -126,10 +123,12 @@
 }
 
 -(void)loadYesterdayData{
+    detailModel = nil;
     [self loadDetailDataWithType:@"2"];
 }
 
 -(void)loadTodayData{
+    detailModel = nil;
     [self loadDetailDataWithType:@"1"];
 }
 
@@ -143,39 +142,64 @@
 #pragma mark - 点击section上的Btn
 -(void)click:(UIButton *)btn{
     
-//    detailModel = nil;
     NSLog(@"section被点击");
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:btn.tag];
+    CaseTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    
     NSString *indexSection=[NSString stringWithFormat:@"%zi",btn.tag];
     DetDataModel *dataMod = model.data[btn.tag];
     NSLog(@"%@",dataMod.groupcode);
     [detailBean setValue:dataMod.groupcode forKey:@"groupcode"];
+
     if ([self.exp objectForKey:indexSection]) {
-        
-        //如果有这个section
+    
         BOOL b=[[self.exp objectForKey:indexSection] boolValue];
         [self.exp removeAllObjects];
+        detailModel = nil;
+        [self.tableView reloadData];
+    
         if(b){
             detailModel = nil;
+            
+            [self.tableView reloadData];
+            
             [ self.exp setObject:[NSNumber numberWithBool:NO] forKey:indexSection];
             NSLog(@"section关闭");
         }
         else {
-
+            
+            detailModel = nil;
+            [self.tableView reloadData];
+            
+            if (cell.todayBtn.backgroundColor == NAVICOLOR) {
+                [self loadTodayData];
+            }
+            else{
+                [self loadYesterdayData];
+            }
+            
+            
             [ self.exp setObject:[NSNumber numberWithBool:YES] forKey:indexSection];
             NSLog(@"secton展开");
-            
             
         }
         
     }
     else{
+        
+        detailModel = nil;
         [self.exp removeAllObjects];
         [self.exp setObject:[NSNumber numberWithBool:YES] forKey:indexSection];
     }
+
     //    NSIndexSet *indexset=[NSIndexSet indexSetWithIndex:btn.tag];
     //    [_tableview reloadSections:indexset withRowAnimation:UITableViewRowAnimationFade];
-
     
+    cell.todayBtn.backgroundColor = NAVICOLOR;
+    [cell.todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    cell.untilYesterdayBtn.backgroundColor = [UIColor whiteColor];
+    [cell.untilYesterdayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     
     [self.tableView reloadData];
     
@@ -194,6 +218,7 @@
     NSString *indexsection=[NSString stringWithFormat:@"%zi",section];
     BOOL b=[[self.exp objectForKey:indexsection] boolValue];
     if ([self.exp objectForKey:indexsection] && b) {
+        
         return 1;
     }
     return 0;
@@ -203,13 +228,25 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     CaseTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CaseTableViewCell"];
+    
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     index = indexPath.section;
+
     
-    [cell.todayBtn addTarget:self action:@selector(loadTodayData) forControlEvents:UIControlEventTouchUpInside];
-    [cell.untilYesterdayBtn addTarget:self action:@selector(loadYesterdayData) forControlEvents:UIControlEventTouchUpInside];
     [cell setUIWithInfo:detailModel];
+    
+    UIButton *todayBtn = [cell viewWithTag:101];
+    [todayBtn addTarget:self action:@selector(loadTodayData) forControlEvents:UIControlEventTouchUpInside];
+//    todayBtn.backgroundColor = NAVICOLOR;
+//    [todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    UIButton *yestodayBtn = [cell viewWithTag:102];
+    [yestodayBtn addTarget:self action:@selector(loadYesterdayData) forControlEvents:UIControlEventTouchUpInside];
+//    yestodayBtn .backgroundColor = [UIColor whiteColor];
+//    [yestodayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    
+    
     return cell;
 }
 

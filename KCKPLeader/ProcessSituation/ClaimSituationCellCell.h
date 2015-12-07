@@ -15,9 +15,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *moreLab;
 @property (weak, nonatomic) IBOutlet UILabel *totalLab;
 
+@property (weak, nonatomic) IBOutlet UILabel *yesOneLab;
+@property (weak, nonatomic) IBOutlet UILabel *yesMoreLab;
+@property (weak, nonatomic) IBOutlet UILabel *yesTotalLab;
+
 
 -(void)setPicUIWithInfo:(ClaimModel *)model;
 -(void)setDutUIWithInfo:(ClaimModel *)model;
 -(void)setInsUIWithInfo:(ClaimModel *)model;
 -(void)setCpsUIWithInfo:(ClaimModel *)model;
+
 @end
