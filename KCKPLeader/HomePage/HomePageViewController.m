@@ -288,13 +288,13 @@
 //根据type加载数据 1为今天 2为截止昨天
 -(void)loadCaseDataWithType1{
     
-//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:bean];
     [dic setValue:@"1" forKey:@"type"];
     NSLog(@"1");
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchcasenum" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-//        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [hud hide:YES afterDelay:0];
         
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
@@ -313,14 +313,14 @@
 
 
 -(void)loadCaseDataWithType2{
-    
-//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:bean];
     [dic setValue:@"2" forKey:@"type"];
     NSLog(@"2");
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnSearchcasenum" params:dic httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
-//        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [hud hide:YES afterDelay:0];
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
             NSLog(@"YesterdayResult:%@",jsonStr);

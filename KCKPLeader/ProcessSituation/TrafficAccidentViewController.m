@@ -36,6 +36,8 @@
     // Do any additional setup after loading the view.
     
     self.view.backgroundColor = [UIColor whiteColor];
+    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"点击某个支队展开支队详情，点击今天和截止昨天查看最新数据" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+    [alertView show];
     
     bean = [NSMutableDictionary dictionary];
     self.data=[NSMutableArray array];
@@ -171,14 +173,6 @@
             
             detailModel = nil;
             [self.tableView reloadData];
-            
-            if (cell.todayBtn.backgroundColor == NAVICOLOR) {
-                [self loadTodayData];
-            }
-            else{
-                [self loadYesterdayData];
-            }
-            
             
             [ self.exp setObject:[NSNumber numberWithBool:YES] forKey:indexSection];
             NSLog(@"secton展开");

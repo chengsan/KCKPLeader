@@ -50,7 +50,7 @@
 //#define UpdateURL @"http://192.168.3.217:86/KCKP/restservices/kckpdecanrest/"
 #define UpdateURL @"http://202.43.147.35/restservices/kckpdecanrest/"
 
-#define VersionCode @"1"
+#define VersionCode @"0"
 
 //获取设备的物理高度
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
