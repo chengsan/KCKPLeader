@@ -68,9 +68,12 @@
 -(void)loadInsDetailData{
     
     __weak typeof(self) weakSelf = self;
-    
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.labelText = @"正在加载...";
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnInsinfo" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
+        [hud hide:YES afterDelay:0];
+    
         if (result != nil) {
             NSString *jsonStr = [Util objectToJson:result];
             NSLog(@"信息:%@",jsonStr);

@@ -74,7 +74,6 @@
 		859067C11C05B13400E9E15E /* PhoneBindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 859067C01C05B13400E9E15E /* PhoneBindingViewController.m */; };
 		859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859067C51C05BD9700E9E15E /* UserNameViewController.xib */; };
 		859DB1781C07F238005602C6 /* ChangePassWordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859DB1771C07F238005602C6 /* ChangePassWordViewController.xib */; };
-		859DB17C1C0830D3005602C6 /* CaseTableViewCell6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 859DB17B1C0830D3005602C6 /* CaseTableViewCell6.xib */; };
 		859DB1971C083E8D005602C6 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 859DB1801C083E8D005602C6 /* JSONModel.m */; };
 		859DB1981C083E8D005602C6 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 859DB1821C083E8D005602C6 /* JSONModelArray.m */; };
 		859DB1991C083E8D005602C6 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 859DB1841C083E8D005602C6 /* JSONModelClassProperty.m */; };
@@ -250,7 +249,6 @@
 		859067C01C05B13400E9E15E /* PhoneBindingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneBindingViewController.m; sourceTree = "<group>"; };
 		859067C51C05BD9700E9E15E /* UserNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
 		859DB1771C07F238005602C6 /* ChangePassWordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePassWordViewController.xib; sourceTree = "<group>"; };
-		859DB17B1C0830D3005602C6 /* CaseTableViewCell6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaseTableViewCell6.xib; sourceTree = "<group>"; };
 		859DB17F1C083E8D005602C6 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		859DB1801C083E8D005602C6 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		859DB1811C083E8D005602C6 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -578,7 +576,6 @@
 				859067901C0586F200E9E15E /* CaseTableViewCell.h */,
 				859067911C0586F200E9E15E /* CaseTableViewCell.m */,
 				859067921C0586F200E9E15E /* CaseTableViewCell.xib */,
-				859DB17B1C0830D3005602C6 /* CaseTableViewCell6.xib */,
 				859067951C058CEC00E9E15E /* TotalTableViewCell.h */,
 				859067961C058CEC00E9E15E /* TotalTableViewCell.m */,
 				859067971C058CEC00E9E15E /* TotalTableViewCell.xib */,
@@ -835,6 +832,7 @@
 				TargetAttributes = {
 					589FE0FC1C04ABA40043181D = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = S58CK2GNVZ;
 					};
 					589FE1151C04ABA40043181D = {
 						CreatedOnToolsVersion = 6.4;
@@ -867,7 +865,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8546D0AD1C0D40BE00317CFA /* SectionView.xib in Resources */,
-				859DB17C1C0830D3005602C6 /* CaseTableViewCell6.xib in Resources */,
 				8590679E1C059E9C00E9E15E /* ProcessSituationCell.xib in Resources */,
 				859067801C055E4700E9E15E /* Main.storyboard in Resources */,
 				85AB10641C117AF300DC130D /* ClaimTotalCell.xib in Resources */,
@@ -1151,15 +1148,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Longrise Science& Technology Co., Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Longrise Science& Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.longrise.JSFXLeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "09b174a7-bf80-41b5-a4c4-403643b13378";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1169,15 +1166,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Longrise Science& Technology Co., Ltd";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Longrise Science& Technology Co., Ltd";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KCKPLeader/KCKPLeader.pch";
 				INFOPLIST_FILE = KCKPLeader/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.longrise.JSFXLeader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "09b174a7-bf80-41b5-a4c4-403643b13378";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

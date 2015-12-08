@@ -34,6 +34,9 @@
 }
 
 -(void)awakeFromNib{
+    
+    [AppDelegate storyBoradAutoLay:self];
+    
     self.todayBtn.layer.cornerRadius = 3;
     self.todayBtn.layer.borderWidth = 1;
     self.todayBtn.layer.borderColor = NAVICOLOR.CGColor;

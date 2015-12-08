@@ -187,7 +187,7 @@
         }
         cell.rankLab.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row+1];
         cell.rankLab.textColor = [UIColor whiteColor];
-        cell.companyNameLab.text = @"中国人民财产保险股份有限公司武汉分公司";
+        cell.companyNameLab.text = @"中国人民财产保险股份有限公司北京分公司";
         return cell;
     }
 }

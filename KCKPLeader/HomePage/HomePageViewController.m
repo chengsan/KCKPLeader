@@ -77,12 +77,13 @@
     [self loadClaimToalCountData];
     
     [self checkVersion];
+    
 }
 
 #pragma mark - 初始化segment
 -(void)initSegment{
     
-    _segmentControl = [[HMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40*ScreenHeight/667)];
+    _segmentControl = [[HMSegmentedControl alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 30*ScreenHeight/568)];
     _segmentControl.sectionTitles = @[@"案件处理",@"自行协商",@"远程指导",@"转现场"];
     _segmentControl.titleTextAttributes = @{NSFontAttributeName : [UIFont systemFontOfSize:15]};
     _segmentControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : NAVICOLOR};
@@ -106,6 +107,10 @@
     
     self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_segmentControl.frame), ScreenWidth, 160*scale)];
     self.scrollView.contentSize = CGSizeMake(ScreenWidth * 4, 160*scale);
+    if (ScreenHeight == 667) {
+        self.scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(_segmentControl.frame), ScreenWidth, 140)];
+        self.scrollView.contentSize = CGSizeMake(ScreenWidth * 4, 140);
+    }
     self.scrollView.pagingEnabled = YES;
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.delegate = self;
@@ -149,17 +154,17 @@
     UINib *nib = [UINib nibWithNibName:@"ClaimTotalCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ClaimTotalCell"];
     
-    if (ScreenWidth == 320) {
-        
+//    if (ScreenWidth == 320) {
+    
         UINib *caseNib = [UINib nibWithNibName:@"CaseTableViewCell" bundle:nil];
         [self.tableView registerNib:caseNib forCellReuseIdentifier:@"CaseTableViewCell"];
-    }
+//    }
     
-    else{
-    
-        UINib *nib = [UINib nibWithNibName:@"CaseTableViewCell6" bundle:nil];
-        [self.tableView registerNib:nib forCellReuseIdentifier:@"CaseTableViewCell"];
-    }
+//    else{
+//    
+//        UINib *nib = [UINib nibWithNibName:@"CaseTableViewCell6" bundle:nil];
+//        [self.tableView registerNib:nib forCellReuseIdentifier:@"CaseTableViewCell"];
+//    }
 
 }
 
@@ -431,7 +436,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     switch (indexPath.section) {
         case 0:
-            return 230;
+            return 230*ScreenHeight/568;
             break;
             
         case 1:

@@ -23,6 +23,7 @@
     NSMutableArray *detailData;
     
     NSInteger index;
+    BOOL isRemind;
     
 }
 @property(nonatomic,retain)NSMutableArray *data;//数据源
@@ -34,10 +35,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    isRemind = [[NSUserDefaults standardUserDefaults] boolForKey:@"remind"];
+    if (!isRemind) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"点击某个支队展开支队详情，点击今天和截止昨天查看最新数据" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alertView show];
+        isRemind = YES;
+        [[NSUserDefaults standardUserDefaults] setBool:isRemind forKey:@"remind"];
+    }
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    UIAlertView * alertView = [[UIAlertView alloc] initWithTitle:@"温馨提示" message:@"点击某个支队展开支队详情，点击今天和截止昨天查看最新数据" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-    [alertView show];
     
     bean = [NSMutableDictionary dictionary];
     self.data=[NSMutableArray array];
@@ -56,13 +62,8 @@
     [self loadDetachmentData];
     
     UINib *nib;
-    if (ScreenWidth<375) {
-        nib = [UINib nibWithNibName:@"CaseTableViewCell" bundle:nil];
-        
-    }
-    else{
-        nib = [UINib nibWithNibName:@"CaseTableViewCell6" bundle:nil];
-    }
+    
+    nib = [UINib nibWithNibName:@"CaseTableViewCell" bundle:nil];
     
     self.tableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-64);
     [self.tableView registerNib:nib forCellReuseIdentifier:@"CaseTableViewCell"] ;
@@ -275,7 +276,7 @@
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 230;
+    return 230*ScreenHeight/568;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

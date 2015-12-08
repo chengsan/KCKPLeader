@@ -12,10 +12,11 @@
 
 -(void)setUIWithInfo:(CompanyModel *)model{
     
+    self.titleLab.numberOfLines = 2;
     self.titleLab.text         = model.insname;
     self.totalNum.text         = model.cpsnum;
     self.rate.text             = model.payrat;
-    self.time.text             = model.cpsave;
+    self.time.text             = [NSString stringWithFormat:@"%@天",model.cpsave];
     self.userSatisfaction.text = model.scorat;
     
 }
@@ -23,6 +24,7 @@
 - (void)awakeFromNib {
     // Initialization code
     [AppDelegate storyBoradAutoLay:self];
+    
     
 }
 
