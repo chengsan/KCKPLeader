@@ -10,6 +10,7 @@
 #import "TrafficAccidentViewController.h"
 #import "ClaimViewController.h"
 #import "InsuranceViewController.h"
+#import "NewTrafficViewController.h"
 @interface ProcessSituationViewController ()
 {
     NSArray *titleAry;
@@ -23,8 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"处理情况";
-    titleAry = @[@"交通事故处理情况",@"理赔处理情况",@"保险公司处理情况"];
-    imgAry = @[@"ico01",@"ico02",@"ico03"];
+    titleAry = @[@"交通事故处理大队情况",@"理赔处理情况",@"保险公司处理情况",@"交通事故处理支队情况"];
+    imgAry = @[@"ico01",@"ico02",@"ico03",@"ico4"];
     
     UINib *nib = [UINib nibWithNibName:@"ProcessSituationCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ProcessSituationCell"];
@@ -38,7 +39,7 @@
 #pragma mark - tableView代理
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 3;
+    return 4;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -46,6 +47,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     ProcessSituationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProcessSituationCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.icon.image = [UIImage imageNamed:imgAry[indexPath.section]];
@@ -59,19 +61,29 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIViewController *vc;
     if (indexPath.section == 0) {
-        vc = [TrafficAccidentViewController new];
+        NewTrafficViewController *newVC = [NewTrafficViewController new];
+        newVC.titleStr = @"交通事故大队处理情况";
+        [self presentViewController:newVC animated:YES completion:nil];
     }
     else if (indexPath.section == 1){
-        vc = [ClaimViewController new];
+        ClaimViewController *vc = [ClaimViewController new];
+        vc.title = titleAry[indexPath.section];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    else if (indexPath.section == 2){
+        InsuranceViewController *vc = [InsuranceViewController new];
+        vc.title = titleAry[indexPath.section];
+        vc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:vc animated:YES];
     }
     else{
-        vc = [InsuranceViewController new];
+        NewTrafficViewController *newVC = [NewTrafficViewController new];
+        newVC.titleStr = @"交通事故支队处理情况";
+        [self presentViewController:newVC animated:YES completion:nil];
     }
-    vc.title = titleAry[indexPath.section];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 

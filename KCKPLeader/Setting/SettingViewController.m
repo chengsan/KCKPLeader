@@ -55,9 +55,14 @@
     
     SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SettingTableViewCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    if (!(indexPath.section == 0 && indexPath.row == 1)) {
+        cell.phoneLab.hidden = YES;
+    }
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
-            cell.icon.image = [UIImage imageNamed:@"ico20"];
+            cell.icon.image = [UIImage imageNamed:@"nicon07"];
             cell.titleLab.text = @"用户名";
             NSString *currentUserName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
 //            NSLog(@"%@",currentUserName);
@@ -65,7 +70,7 @@
             cell.rightLab.textColor = [UIColor grayColor];
         }
         else if (indexPath.row == 1) {
-            cell.icon.image = [UIImage imageNamed:@"ico21"];
+            cell.icon.image = [UIImage imageNamed:@"nicon08"];
             cell.titleLab.text = @"手机";
             
             NSString *currentPhoneNum;
@@ -75,24 +80,35 @@
                 
             }
             
-            cell.rightLab.text = currentPhoneNum;
-            cell.rightLab.textColor = [UIColor grayColor];
+            //隐藏手机号中间4位
+            NSMutableString *hideNum = [NSMutableString stringWithString:currentPhoneNum];
+            NSRange range = {3,4};
+            //判断用户是否有手机号，没有则不进行操作，防止程序在用户没有绑定手机号的时候崩溃
+            if (currentPhoneNum.length == 11) {
+                [hideNum replaceCharactersInRange:range withString:@"****"];
+                cell.phoneLab.text = hideNum;
+                cell.phoneLab.textColor = [UIColor grayColor];
+                cell.rightLab.text = @"修改";
+                cell.rightLab.textColor = NAVICOLOR;
+            }
+            
         }
         else {
-            cell.icon.image = [UIImage imageNamed:@"ico22"];
+            cell.icon.image = [UIImage imageNamed:@"nicon09"];
             cell.titleLab.text = @"登录密码";
             cell.rightLab.text = @"修改";
             cell.rightLab.textColor = NAVICOLOR;
         }
     }
+    
     else if (indexPath.section == 1){
         if (indexPath.row == 0) {
-            cell.icon.image = [UIImage imageNamed:@"ico23"];
+            cell.icon.image = [UIImage imageNamed:@"nicon10"];
             cell.titleLab.text = @"清除缓存";
             
         }
         else{
-            cell.icon.image = [UIImage imageNamed:@"ico24"];
+            cell.icon.image = [UIImage imageNamed:@"nicon11"];
             cell.titleLab.text = @"退出登录";
         }
         cell.rightLab.textColor = [UIColor clearColor];
@@ -105,8 +121,6 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    SettingTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
     if (indexPath.section == 0) {
         UIViewController *vc;
@@ -117,18 +131,15 @@
         }
         else if (indexPath.row == 1){
             vc = (PhoneBindingViewController *)[PhoneBindingViewController new];
-            if (cell.rightLab.text == NULL) {
-                vc.title = @"绑定手机";
-            }
-            else{
-                vc.title = @"换绑手机";
-            }
+            vc.title = @"绑定手机";
+            
         }
         else{
             vc = [ChangePassWordViewController new];
             vc.title = @"修改密码";
         }
         
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else{

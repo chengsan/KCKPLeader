@@ -38,9 +38,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *more_pro;
 @property (weak, nonatomic) IBOutlet UILabel *uncla_pro;
 
+@property (strong, nonatomic) IBOutlet PNPieChart *pieChart;
 
+//@property (nonatomic, strong) PNPieChart *pieChart;
 
-@property (nonatomic, strong) PNPieChart *pieChart;
 @property (nonatomic, strong) UILabel *totalCount;
 @property (nonatomic, strong) UILabel *totlaLab;
 

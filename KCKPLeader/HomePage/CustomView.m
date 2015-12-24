@@ -28,14 +28,15 @@
         
         CGFloat chartWidth = (ScreenWidth-80)/3;
         self.todayChartV = [[UIImageView alloc]initWithFrame:CGRectMake(20, 8, chartWidth, chartWidth) ];
-        self.todayChartV.image = [UIImage imageNamed:@"icon111"];
+        self.todayChartV.image = [UIImage imageNamed:@"180"];
         self.todayChartV.backgroundColor = [UIColor clearColor];
        
         [self addSubview:self.todayChartV];
         
         self.todayLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, chartWidth, chartWidth)];
         self.todayLab.center = self.todayChartV.center;
-        self.todayLab.textColor = RGBA(249, 144, 0, 1.0);
+//        self.todayLab.textColor = RGBA(249, 144, 0, 1.0);
+        self.todayLab.textColor = RGBA(49, 120, 255, 1.0);
         self.todayLab.textAlignment = NSTextAlignmentCenter;
         self.todayLab.numberOfLines = 0;
         self.todayLab.text = @"";
@@ -49,7 +50,7 @@
         [self addSubview:_todayAverage];
         
         self.weekChartV = [[UIImageView alloc]initWithFrame:CGRectMake(40+chartWidth, _todayChartV.frame.origin.y, chartWidth, chartWidth) ];
-        self.weekChartV.image = [UIImage imageNamed:@"icon222"];
+        self.weekChartV.image = [UIImage imageNamed:@"180"];
         [self addSubview:self.weekChartV];
         
         self.weekLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, chartWidth, chartWidth)];
@@ -68,12 +69,13 @@
         [self addSubview:_weekAverage];
         
         self.monthChartV = [[UIImageView alloc]initWithFrame:CGRectMake(60+2*chartWidth, _todayChartV.frame.origin.y, chartWidth, chartWidth) ];
-        self.monthChartV.image = [UIImage imageNamed:@"icon333"];
+        self.monthChartV.image = [UIImage imageNamed:@"180"];
         [self addSubview:self.monthChartV];
         
         self.monthLab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, chartWidth, chartWidth)];
         self.monthLab.center = self.monthChartV.center;
-        self.monthLab.textColor = RGBA(111, 171, 0, 1.0);
+//        self.monthLab.textColor = RGBA(111, 171, 0, 1.0);
+        self.monthLab.textColor = RGBA(49, 120, 255, 1.0);
         self.monthLab.textAlignment = NSTextAlignmentCenter;
         self.monthLab.text = @"";
         self.monthLab.numberOfLines = 0;

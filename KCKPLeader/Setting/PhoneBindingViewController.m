@@ -7,7 +7,7 @@
 //
 
 #import "PhoneBindingViewController.h"
-
+#import "SettingViewController.h"
 @interface PhoneBindingViewController ()<UITextFieldDelegate>
 {
     //要修改的手机号
@@ -23,6 +23,8 @@
     
     BOOL IsValid;
     MBProgressHUD *hud;
+    NSTimer *timer;
+    NSInteger seconds;
 
 }
 @end
@@ -33,12 +35,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    [AppDelegate storyBoradAutoLay:self.view];
+    seconds = 10;
     bean = [NSMutableDictionary dictionary];
     childBean = [NSMutableDictionary dictionary];
     getCodeBean = [NSMutableDictionary dictionary];
     currentUserName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
-    userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
+    userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"tureid"];
     [bean setValue:currentUserName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
     [childBean setValue:userId forKey:@"userid"];
@@ -52,7 +56,9 @@
     
     }
     self.confirmBtn.backgroundColor = NAVICOLOR;
+    self.confirmBtn.layer.cornerRadius = 3;
     self.sengBtn.backgroundColor = NAVICOLOR;
+    self.sengBtn.layer.cornerRadius = 3;
     [self.confirmBtn addTarget:self action:@selector(judgeCodeIsValid) forControlEvents:UIControlEventTouchUpInside];
     [self.sengBtn addTarget:self action:@selector(getCode) forControlEvents:UIControlEventTouchUpInside];
     
@@ -63,11 +69,8 @@
 
     [self.phoneField resignFirstResponder];
     [self.codeField resignFirstResponder];
-    [childBean setValue:phoneNum forKey:@"phone"];
 
      NSLog(@"bean%@",bean);
-
-    
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnModifyUser" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
 
         NSString *str = [Util objectToJson:result];
@@ -79,10 +82,37 @@
             
             [[NSUserDefaults standardUserDefaults] setValue:phoneNum forKey:@"phone"];
             [[NSUserDefaults standardUserDefaults] synchronize];
+            SettingViewController *vc = [SettingViewController new];
+             [vc.tableView reloadData];
+            vc.navigationItem.hidesBackButton = YES;
+            [self.navigationController pushViewController:vc animated:YES];
         }
     }];
    
     
+}
+
+-(void)setTimer{
+    
+    if (timer == nil) {
+        timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+    }
+}
+
+-(void)timerFireMethod:(NSTimer *)theTimer {
+    if (seconds == 1) {
+        [theTimer invalidate];
+        self.sengBtn.backgroundColor = NAVICOLOR;
+        self.sengBtn.userInteractionEnabled = YES;
+        [self.sengBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+        
+    }else{
+        seconds--;
+        NSString *title = [NSString stringWithFormat:@"剩余%ld秒",seconds];
+        self.sengBtn.backgroundColor = [UIColor grayColor];
+        self.sengBtn.userInteractionEnabled = NO;
+        [self.sengBtn setTitle:title forState:UIControlStateNormal];
+    }
 }
 
 #pragma mark - 获取验证码
@@ -96,8 +126,14 @@
     
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.labelText = @"正在获取验证码";
+    
     //判断手机号是否有效
     if ([Util isValidateMobile:_phoneField.text]) {
+        
+        self.sengBtn.backgroundColor = [UIColor grayColor];
+        self.sengBtn.userInteractionEnabled = NO;
+        [self setTimer];
+        
         [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnAppSendVercode" params:getCodeBean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
             
             hud.labelText = @"获取成功";
@@ -110,10 +146,12 @@
     }
     else{
         hud.labelText = @"您输入的不是正确的手机号";
-        [hud hide:YES afterDelay:1.0];
+        hud.mode = MBProgressHUDModeText;
+        [hud hide:YES afterDelay:3.0];
     }
     
 }
+
 
 #pragma mark - 判断验证码的有效性
 -(void)judgeCodeIsValid{
@@ -137,6 +175,7 @@
         NSString *jsonStr = [Util objectToJson:result];
         NSLog(@"判断验证码%@",jsonStr);
         NSDictionary *dic = result;
+        hud.mode = MBProgressHUDModeText;
         hud.labelText = [dic objectForKey:@"redes"];
         [hud hide:YES afterDelay:2.0];
         

@@ -17,6 +17,9 @@
     NSString *loginState;
     NSMutableDictionary *bean;
     MBProgressHUD *hud;
+    BOOL isRem;//是否记住密码
+    
+    NSInteger count;
 }
 @end
 
@@ -25,9 +28,16 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [AppDelegate storyBoradAutoLay:self.view];
+    
+    if (ScreenHeight != 480) {
+        [AppDelegate storyBoradAutoLay:self.view];
+    }
+    
     [NSThread sleepForTimeInterval:1.5];
     bean = [NSMutableDictionary dictionary];
+    
+
+    
     
 //    userName = @"longrise";
 //    passWord = [DESCript encrypt:@"888888a" encryptOrDecrypt:kCCEncrypt key:@"longstar"];
@@ -37,16 +47,36 @@
 //    self.navigationController.navigationBarHidden = YES;
     [self.navigationController.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
     self.navigationController.navigationBar.barTintColor = NAVICOLOR;
-    self.navigationController.navigationBar.translucent = NO;
     [self.loginBtn addTarget:self action:@selector(presentHomePage) forControlEvents:UIControlEventTouchUpInside];
     self.loginBtn.backgroundColor = NAVICOLOR;
-    self.loginBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-    self.loginBtn.layer.borderWidth = 1.0;
+    self.loginBtn.layer.cornerRadius = 5;
+    self.remindPass.layer.cornerRadius = 3;
+    
+    isRem = [[NSUserDefaults standardUserDefaults] boolForKey:@"isrem"];
+
+    
+    NSLog(@"viewDidBool%d",isRem);
+    if (isRem) {
+        self.remOn.image = [UIImage imageNamed:@"on"];
+        [self.userField endEditing:YES];
+        [self.passField endEditing:YES];
+        self.userField.text = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
+        userName = _userField.text;
+        NSLog(@"_userField%@",_userField.text);
+        
+        self.passField.text = [DESCript encrypt:[[NSUserDefaults standardUserDefaults] objectForKey:@"password"] encryptOrDecrypt:kCCDecrypt key:@"longstar"];
+        passWord = _passField.text;
+        NSLog(@"_passField%@",_passField.text);
+        
+    }
+    else{
+        self.remOn.image = [UIImage imageNamed:@"off"];
+    }
     
 
 }
 
-//载入用户信息
+#pragma mark - 载入用户信息
 -(void)loadData
 {
     
@@ -78,7 +108,13 @@
                 [userDefaults setValue:currentUserName forKey:@"username"];
                 [userDefaults setValue:passWord forKey:@"password"];
                 [userDefaults setValue:loginState forKey:@"loginState"];
-                [userDefaults setValue:currentUserId forKey:@"userid"];
+                [userDefaults setValue:currentUserId forKey:@"tureid"];
+                
+                [userDefaults setValue:[DESCript encrypt:currentUserId
+                                        encryptOrDecrypt:kCCEncrypt
+                                                     key:@"longstar"]
+                                forKey:@"userid"];
+                
                 [userDefaults synchronize];
                 
                 UIStoryboard *s = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -86,7 +122,7 @@
             }
             else{
                     
-                
+                hud.mode = MBProgressHUDModeText;
                 hud.labelText = @"用户名或密码错误";
                 [hud hide:YES afterDelay:1.0];
                 NSLog(@"用户名或密码错误");
@@ -96,6 +132,9 @@
             
         }
         else{
+            hud.mode = MBProgressHUDModeText;
+            hud.labelText = @"网络错误";
+            [hud hide:YES afterDelay:1.0];
             NSLog(@"返回数据为空");
         }
 
@@ -103,7 +142,33 @@
     
 }
 
+#pragma mark - 是否记住密码
+- (IBAction)rememberPassWord:(id)sender {
+    
+    isRem = [[NSUserDefaults standardUserDefaults] boolForKey:@"isrem"];
+    if (isRem) {
+        isRem = 0;
+        self.remOn.image = [UIImage imageNamed:@"off"];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"password"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
 
+    }
+    else{
+        isRem = 1;
+        self.remOn.image = [UIImage imageNamed:@"on"];
+        
+    }
+
+    NSLog(@"点击");
+
+    [[NSUserDefaults standardUserDefaults] setBool:isRem forKey:@"isrem"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    NSLog(@"BOOL%d",isRem);
+    
+
+}
 
 //隐藏状态栏
 //-(BOOL)prefersStatusBarHidden{
@@ -111,15 +176,18 @@
 //}
 
 
+#pragma mark - 账户验证
 //验证用户名和密码是否正确，是则跳转到主页，否则提示用户
 -(void)presentHomePage{
     
 //    self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
-    [self.passField resignFirstResponder];
-    [self.userField resignFirstResponder];
-    NSLog(@"%@",userName);
-    NSLog(@"%@",passWord);
+//    [self.passField resignFirstResponder];
+//    [self.userField resignFirstResponder];
+    [self.userField endEditing:YES];
+    [self.passField endEditing:YES];
+    NSLog(@"pressuserName%@",userName);
+    NSLog(@"presspassWord%@",passWord);
     hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     if ([_userField.text isEqual:@""] || [_passField.text isEqual:@""]) {
         
@@ -142,6 +210,7 @@
     
 }
 
+#pragma mark - textField Delegate
 - (void)textFieldDidEndEditing:(UITextField *)textField{
 
     
@@ -164,10 +233,10 @@
     
     int offset;
     if (textField == _userField) {
-        offset = frame.origin.y + 122 - (self.view.frame.size.height - 216.0);//键盘高度216
+        offset = frame.origin.y + 127 - (self.view.frame.size.height - 216.0);//键盘高度216
     }
     else{
-        offset = frame.origin.y + 68 - (self.view.frame.size.height - 216.0);//键盘高度216
+        offset = frame.origin.y + 73 - (self.view.frame.size.height - 216.0);//键盘高度216
     }
     
     NSTimeInterval animationDuration = 0.30f;
@@ -175,10 +244,9 @@
     [UIView setAnimationDuration:animationDuration];
     
     //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
-//    if (ScreenHeight<568) {
-        if(offset > 0)
-            self.view.frame = CGRectMake(0.0f, -offset, self.view.frame.size.width, self.view.frame.size.height);
-//    }
+
+    if(offset > 0)
+    self.view.frame = CGRectMake(0.0f, -offset, self.view.frame.size.width, self.view.frame.size.height);
     
 
     [UIView commitAnimations];
@@ -194,6 +262,7 @@
 
 
 
+#pragma mark -
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 //    self.view.frame =CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);

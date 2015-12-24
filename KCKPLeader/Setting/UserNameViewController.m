@@ -29,15 +29,14 @@
     bean = [NSMutableDictionary dictionary];
     childBean = [[NSMutableDictionary alloc] init];
     currentUserName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
-    userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"useid"];
+    userId = [[NSUserDefaults standardUserDefaults] objectForKey:@"tureid"];
     NSLog(@"%@",currentUserName);
     NSLog(@"%@",userId);
     [childBean setValue:userId forKey:@"userid"];
     
     [bean setValue:currentUserName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
-    [bean setValue:childBean forKey:@"user"];
     
     self.confirmBtn.backgroundColor = NAVICOLOR;
     [self.confirmBtn addTarget:self action:@selector(confirmChanged) forControlEvents:UIControlEventTouchUpInside];
@@ -47,10 +46,12 @@
 -(void)confirmChanged{
     
     [self.userField resignFirstResponder];
-    
+
     NSLog(@"输入的：%@",changedUserName);
     [childBean setValue:changedUserName forKey:@"username"];
+    [bean setValue:childBean forKey:@"user"];
     NSLog(@"BEAN%@",bean);
+    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:NO];
 //    hud.mode = MBProgressHUDModeAnnularDeterminate;
     hud.labelText = @"正在提交";

@@ -23,6 +23,8 @@
     [self.window makeKeyAndVisible];
     
     
+    
+    
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
     
     if(ScreenHeight != 568){
@@ -64,8 +66,10 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-//storyBoard view自动适配
 
+
+
+//storyBoard view自动适配
 + (void)storyBoradAutoLay:(UIView *)allView
 {
     for (UIView *temp in allView.subviews) {

@@ -52,8 +52,7 @@
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"首页";
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-//    passWord = [DESCript encrypt:@"888888a" encryptOrDecrypt:kCCEncrypt key:@"longstar"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
     bean = [[NSMutableDictionary alloc]init];
     NSLog(@"用户名%@",userName);
     NSLog(@"密码%@",passWord);
@@ -183,12 +182,12 @@
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setValue:@"KCKP_Leader" forKey:@"arg1"];
 
-    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    hud.labelText = @"正在检查更新...";
+//    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    hud.labelText = @"正在检查更新...";
     
     [[Globle getInstance].service requestWithServiceIP:UpdateURL ServiceName:@"lbcp_getAppVersion" params:params httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
 
-        [hud hide:YES afterDelay:1.0];
+//        [hud hide:YES afterDelay:1.0];
         
         if (nil != result) {
             NSString *jsonStr = [Util objectToJson:result];
@@ -344,7 +343,8 @@
 #pragma mark - 加载保险公司理赔总数数据
 -(void)loadClaimToalCountData{
 
-    
+
+    NSLog(@"理赔总数bean%@",bean);
     [[Globle getInstance].service requestWithServiceIP:ServiceURL ServiceName:@"DecAnInscpsnum" params:bean httpMethod:@"POST" resultIsDictionary:YES completeBlock:^(id result) {
         
         NSString *jsonStr = [Util objectToJson:result];
@@ -352,8 +352,11 @@
         
         if (nil != result) {
         
-            NSDictionary *dic = [result objectForKey:@"data"];
-            totlaCount = [dic objectForKey:@"cpsnum"];
+            if ([[result objectForKey:@"restate"] isEqualToString:@"0"]) {
+                NSDictionary *dic = [result objectForKey:@"data"];
+                totlaCount = [dic objectForKey:@"cpsnum"];
+            }
+            
             
         }
         
@@ -473,6 +476,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         InsuranceViewController *vc = [InsuranceViewController new];
+        vc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
@@ -482,6 +486,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 /*
 #pragma mark - Navigation

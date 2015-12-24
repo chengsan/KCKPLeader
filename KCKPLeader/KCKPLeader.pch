@@ -29,7 +29,7 @@
 #import <Availability.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-#import <PNChart.h>
+#import "PNChart.h"
 #import <MBProgressHUD.h>
 #import "SectionView.h"
 #import "DESCript.h"
@@ -38,19 +38,19 @@
 #define NAVICOLOR [UIColor colorWithRed:46/255.0 green:117/255.0 blue:254/255.0 alpha:1.0]
 #define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
-#define FORMATSTR(str) [NSString stringWithFormat:@"%@/\n分钟",str]
+#define FORMATSTR(str) [NSString stringWithFormat:@"%@/\n分",str]
 
 
 //正式地址：http://fjisip.yxybb.com/
 //测试地址：http://211.154.145.81:977/
 //周文海：http://192.168.20.134:8080/BBTone/
-//#define ServiceURL @"http://192.168.3.217:86/KCKP/restservices/kckpjcfsrest/"
+//#define ServiceURL @"http://192.168.3.229:86/KCKP/restservices/kckpjcfsrest/"
+
 #define ServiceURL @"http://202.43.147.35/restservices/kckpjcfsrest/"
 
-//#define UpdateURL @"http://192.168.3.217:86/KCKP/restservices/kckpdecanrest/"
 #define UpdateURL @"http://202.43.147.35/restservices/kckpdecanrest/"
 
-#define VersionCode @"1"
+#define VersionCode @"4"
 
 //获取设备的物理高度
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -58,6 +58,7 @@
 //获取设备的物理宽度
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 
+#define SCALE ScreenHeight/568.0f
 //状态栏高度
 #define StatusBarHeight 20;
 

@@ -36,10 +36,10 @@
     self.title = @"保险公司处理情况";
     
     bean = [NSMutableDictionary dictionary];
-    iconArray = @[@"ico13",@"ico14",@"ico15",@"ico16"];
+    iconArray = @[@"nicon03",@"nicon04",@"nicon05",@"nicon06"];
     dataAry = [NSMutableArray array];
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
     [bean setValue:userName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
     
@@ -98,6 +98,11 @@
 //    UITableViewCellSeparatorStyleNone,
 //    UITableViewCellSeparatorStyleSingleLine,
 //    UITableViewCellSeparatorStyleSingleLineEtched
+}
+
+-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation
+{
+    return UIInterfaceOrientationLandscapeLeft;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -192,19 +197,7 @@
     }
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    if (tableView == self.tableView) {
-        ClaimDetailViewController *vc = [ClaimDetailViewController new];
-//        vc.title = @"理赔详情";
-        CompanyModel *comMod = model.data[indexPath.section];
-        vc.inscode = comMod.inscode;
-        vc.comName = comMod.insname;
-        vc.comIcon = iconArray[indexPath.section%4];
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    
-}
+
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 
@@ -240,6 +233,25 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (tableView == self.tableView) {
+        ClaimDetailViewController *vc = [ClaimDetailViewController new];
+        
+        CompanyModel *comMod = model.data[indexPath.section];
+        vc.inscode = comMod.inscode;
+        vc.comName = comMod.insname;
+        vc.comIcon = iconArray[indexPath.section%4];
+        
+        //改变导航栏返回按钮的文字，避免push过去的VCtitle无法居中
+        UIBarButtonItem *returnButtonItem = [[UIBarButtonItem alloc] init];
+        returnButtonItem.title = @"";
+        self.navigationItem.backBarButtonItem = returnButtonItem;
+        
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+    
+}
 
 
 

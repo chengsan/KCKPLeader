@@ -32,17 +32,15 @@
     // Do any additional setup after loading the view.
 //    UIColor *color = RGBA(235, 235, 235, 1.0);
     self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.pieChart];
+    [AppDelegate storyBoradAutoLay:self.view];
     
-    UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 30)];
-    lab.textColor = [UIColor whiteColor];
-    lab.text = @"理赔详情";
-    lab.textAlignment = NSTextAlignmentCenter;
-    self.navigationItem.titleView = lab;
+    self.title = @"理赔详情";
     
     bean = [NSMutableDictionary dictionary];
     dataAry = [NSMutableArray array];
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
     [bean setValue:userName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
     [bean setValue:self.inscode forKey:@"inscode"];
@@ -50,13 +48,11 @@
 //    NSLog(@"%@",self.comIcon);
 //    NSLog(@"%@",self.comName);
     
-    
-//    UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(self.companyIcon.frame.origin.x, CGRectGetMaxY(self.pieChart.frame), 50, 20)];
-//    lab.text = self.claimRate.text;
-//    [self.view addSubview:lab];
+
     [self loadInsDetailData];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -89,7 +85,7 @@
             NSInteger moreDay = [model.data.num.manday integerValue];
             NSInteger unCla = [model.data.num.noclam integerValue];
             
-            NSString *totlaTime = [NSString stringWithFormat:@"%zi次\n总计处理",oneDay+twoDay+thrDay+moreDay+unCla];
+            NSString *totlaTime = [NSString stringWithFormat:@"总计处理\n%zi次",oneDay+twoDay+thrDay+moreDay+unCla];
             
             UIColor *color1 = RGBA(233, 142, 0, 1.0);
             UIColor *color2 = RGBA(94, 156, 0, 1.0);
@@ -110,16 +106,24 @@
             
             NSArray *items = @[item1,item2,item3,item4,item5];
             
-            weakSelf.pieChart = [[PNPieChart alloc]initWithFrame:CGRectMake(self.conpanyLab.origin.x+80, CGRectGetMaxY(self.conpanyLab.frame)+20, 150, 150) items:items];
+            weakSelf.pieChart = [[PNPieChart alloc]initWithFrame:CGRectMake(self.conpanyLab.origin.x+80*SCALE, CGRectGetMaxY(self.conpanyLab.frame)+10*SCALE, 150*SCALE, 150*SCALE) items:items];
             weakSelf.pieChart.showAbsoluteValues = NO;
             weakSelf.pieChart.showOnlyValues = NO;
             weakSelf.pieChart.labelPercentageCutoff = 20;
+//            if (totlaTime == 0) {
+//                weakSelf.pieChart.labelPercentageCutoff = 20;
+//            }
+//            else{
+//                weakSelf.pieChart.labelPercentageCutoff = 0.1;
+//            }
+
+            weakSelf.pieChart.descriptionTextColor = [UIColor whiteColor];
             weakSelf.pieChart.descriptionTextFont = [UIFont systemFontOfSize:13];
+            [weakSelf.pieChart strokeChart];
             [weakSelf.view addSubview:weakSelf.pieChart];
             
             weakSelf.totalCount = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 60, 50)];
             weakSelf.totalCount.textColor = [UIColor orangeColor];
-//            weakSelf.totalCount.text = [NSString stringWithFormat:@"%@\n总计处理",totlaTime];
             weakSelf.totalCount.text = totlaTime;
             weakSelf.totalCount.textAlignment = NSTextAlignmentCenter;
             weakSelf.totalCount.font = [UIFont systemFontOfSize:13];
@@ -142,21 +146,14 @@
             
             _claimRate.text = [NSString stringWithFormat:@"赔付率为%@",model.data.payrat];
             
-            if (ScreenHeight == 480) {
-                UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(self.companyIcon.frame.origin.x, CGRectGetMaxY(self.pieChart.frame)-10, 100, 20)];
-                lab.textColor = RGBA(94, 155, 14, 1.0);
-                lab.font = [UIFont systemFontOfSize:13];
-                lab.text = [NSString stringWithFormat:@"赔付率为%@",model.data.payrat];;
-                [self.view addSubview:lab];
-            }
-            
-            
         }
         else{
             NSLog(@"数据为空");
         }
+//        [AppDelegate storyBoradAutoLay:self.view];
         
     }];
+    
     
 }
 

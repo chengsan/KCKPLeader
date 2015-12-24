@@ -30,7 +30,7 @@
     dataArray = [NSMutableArray array];
     bean = [NSMutableDictionary dictionary];
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
     [bean setValue:userName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
     
@@ -87,7 +87,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSArray *imgAry = @[@"ico08",@"ico09",@"ico10",@"ico12"];
+    NSArray *imgAry = @[@"ico08",@"nicon01",@"nicon02",@"ico12"];
     NSArray *titleAry = @[@"拍照",@"定责",@"保险报案",@"结案"];
     ClaimSituationCellCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ClaimSituationCellCell"];
     cell.icon.image = [UIImage imageNamed:imgAry[indexPath.section]];

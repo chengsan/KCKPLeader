@@ -12,4 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *userField;
 @property (weak, nonatomic) IBOutlet UITextField *passField;
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *remindPass;
+@property (weak, nonatomic) IBOutlet UIImageView *remOn;
+
 @end

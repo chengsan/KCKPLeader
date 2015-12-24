@@ -51,7 +51,7 @@
     self.exp=[NSMutableDictionary dictionary];
     
     userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"username"];
-    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
+    passWord = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
     
     [bean setValue:userName forKey:@"username"];
     [bean setValue:passWord forKey:@"password"];
@@ -61,12 +61,10 @@
     
     [self loadDetachmentData];
     
-    UINib *nib;
-    
-    nib = [UINib nibWithNibName:@"CaseTableViewCell" bundle:nil];
+
     
     self.tableView.frame = CGRectMake(0, 0, ScreenWidth, ScreenHeight-64);
-    [self.tableView registerNib:nib forCellReuseIdentifier:@"CaseTableViewCell"] ;
+    
     
     
 }
@@ -128,11 +126,26 @@
 -(void)loadYesterdayData{
     detailModel = nil;
     [self loadDetailDataWithType:@"2"];
+    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:index];
+//    CaseTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+//    cell.untilYesterdayBtn.backgroundColor = NAVICOLOR;
+//    [cell.untilYesterdayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    cell.todayBtn.backgroundColor = [UIColor whiteColor];
+//    [cell.todayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 }
 
 -(void)loadTodayData{
     detailModel = nil;
     [self loadDetailDataWithType:@"1"];
+    NSLog(@"index %ld",index);
+    
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:index];
+//    CaseTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+//    cell.todayBtn.backgroundColor = NAVICOLOR;
+//    [cell.todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    cell.untilYesterdayBtn.backgroundColor = [UIColor whiteColor];
+//    [cell.untilYesterdayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 }
 
 
@@ -145,17 +158,26 @@
 #pragma mark - 点击section上的Btn
 -(void)click:(UIButton *)btn{
     
-    NSLog(@"section被点击");
+    UINib *nib = [UINib nibWithNibName:@"CaseTableViewCell" bundle:nil];
+
+    [self.tableView registerNib:nib forCellReuseIdentifier:[NSString stringWithFormat:@"%ld",btn.tag]] ;
     
+    NSLog(@"section被点击");
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:btn.tag];
     CaseTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    cell.todayBtn.backgroundColor = NAVICOLOR;
+    [cell.todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.tableView reloadData];
     
     NSString *indexSection=[NSString stringWithFormat:@"%zi",btn.tag];
+    index = btn.tag;
     DetDataModel *dataMod = model.data[btn.tag];
     NSLog(@"%@",dataMod.groupcode);
     [detailBean setValue:dataMod.groupcode forKey:@"groupcode"];
-
-    if ([self.exp objectForKey:indexSection]) {
+    
+    [self loadTodayData];
+    
+//    if ([self.exp objectForKey:indexSection]) {
     
         BOOL b=[[self.exp objectForKey:indexSection] boolValue];
         [self.exp removeAllObjects];
@@ -169,21 +191,25 @@
             
             [ self.exp setObject:[NSNumber numberWithBool:NO] forKey:indexSection];
             NSLog(@"section关闭");
-        }
-        else {
+//        }
+//        else {
             
             detailModel = nil;
             [self.tableView reloadData];
             
+            [self loadTodayData];
+            
             [ self.exp setObject:[NSNumber numberWithBool:YES] forKey:indexSection];
             NSLog(@"secton展开");
             
-        }
+//        }
         
     }
+    
     else{
         
         detailModel = nil;
+        //保证只能打开一个
         [self.exp removeAllObjects];
         [self.exp setObject:[NSNumber numberWithBool:YES] forKey:indexSection];
     }
@@ -197,7 +223,6 @@
     [cell.untilYesterdayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
     
     [self.tableView reloadData];
-    
 }
 
 
@@ -222,25 +247,18 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    CaseTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"CaseTableViewCell"];
+    CaseTableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:[NSString stringWithFormat:@"%ld",indexPath.section]];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-
-    index = indexPath.section;
-
     
     [cell setUIWithInfo:detailModel];
     
     UIButton *todayBtn = [cell viewWithTag:101];
     [todayBtn addTarget:self action:@selector(loadTodayData) forControlEvents:UIControlEventTouchUpInside];
-//    todayBtn.backgroundColor = NAVICOLOR;
-//    [todayBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     UIButton *yestodayBtn = [cell viewWithTag:102];
     [yestodayBtn addTarget:self action:@selector(loadYesterdayData) forControlEvents:UIControlEventTouchUpInside];
-//    yestodayBtn .backgroundColor = [UIColor whiteColor];
-//    [yestodayBtn setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    
+
     
     return cell;
 }
@@ -266,7 +284,6 @@
     view.count.hidden = YES;
     [view addSubview:btn];
     [btn addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
-    
     return view;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
