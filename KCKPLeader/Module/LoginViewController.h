@@ -17,4 +17,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *remindPass;
 @property (weak, nonatomic) IBOutlet UIImageView *remOn;
 
+@property (weak, nonatomic) IBOutlet UIImageView *automaticLogImage;
+
+@property (weak, nonatomic) IBOutlet UIButton *automaticLogBtn;
+
+
 @end

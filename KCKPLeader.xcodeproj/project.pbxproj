@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3AAD671C2D23E6006FEC00 /* DownloadsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD651C2D23E6006FEC00 /* DownloadsTableViewCell.m */; };
+		4C3AAD681C2D23E6006FEC00 /* DownloadsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD661C2D23E6006FEC00 /* DownloadsTableViewCell.xib */; };
+		4C3AAD701C2D351E006FEC00 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD6F1C2D351E006FEC00 /* HeaderView.m */; };
+		4C3AAD721C2D3547006FEC00 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD711C2D3547006FEC00 /* HeaderView.xib */; };
+		4C3AAD751C2D3705006FEC00 /* APPDataShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD741C2D3705006FEC00 /* APPDataShowView.m */; };
+		4C3AAD771C2D371E006FEC00 /* APPDataShowView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD761C2D371E006FEC00 /* APPDataShowView.xib */; };
+		4C3AAD7A1C2D3FCE006FEC00 /* SaveCaseTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD791C2D3FCE006FEC00 /* SaveCaseTimeView.m */; };
+		4C3AAD7C1C2D3FDD006FEC00 /* SaveCaseTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD7B1C2D3FDD006FEC00 /* SaveCaseTimeView.xib */; };
+		4C3AAD7F1C2D45E8006FEC00 /* SaveCaseBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD7E1C2D45E8006FEC00 /* SaveCaseBottomView.m */; };
+		4C3AAD811C2D4613006FEC00 /* SaveCaseBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD801C2D4613006FEC00 /* SaveCaseBottomView.xib */; };
+		4C3AAD841C2D4915006FEC00 /* ClaimSituationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3AAD831C2D4915006FEC00 /* ClaimSituationView.m */; };
+		4C3AAD861C2D492C006FEC00 /* ClaimSituationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C3AAD851C2D492C006FEC00 /* ClaimSituationView.xib */; };
 		589FE1031C04ABA40043181D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1021C04ABA40043181D /* main.m */; };
 		589FE1061C04ABA40043181D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 589FE1051C04ABA40043181D /* AppDelegate.m */; };
 		589FE10E1C04ABA40043181D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 589FE10D1C04ABA40043181D /* Images.xcassets */; };
@@ -148,6 +160,24 @@
 
 /* Begin PBXFileReference section */
 		395D80AE113C2B613D4615D7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4C3AAD641C2D23E6006FEC00 /* DownloadsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadsTableViewCell.h; sourceTree = "<group>"; };
+		4C3AAD651C2D23E6006FEC00 /* DownloadsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadsTableViewCell.m; sourceTree = "<group>"; };
+		4C3AAD661C2D23E6006FEC00 /* DownloadsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadsTableViewCell.xib; sourceTree = "<group>"; };
+		4C3AAD6E1C2D351E006FEC00 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		4C3AAD6F1C2D351E006FEC00 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		4C3AAD711C2D3547006FEC00 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		4C3AAD731C2D3705006FEC00 /* APPDataShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPDataShowView.h; sourceTree = "<group>"; };
+		4C3AAD741C2D3705006FEC00 /* APPDataShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPDataShowView.m; sourceTree = "<group>"; };
+		4C3AAD761C2D371E006FEC00 /* APPDataShowView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APPDataShowView.xib; sourceTree = "<group>"; };
+		4C3AAD781C2D3FCE006FEC00 /* SaveCaseTimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveCaseTimeView.h; sourceTree = "<group>"; };
+		4C3AAD791C2D3FCE006FEC00 /* SaveCaseTimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveCaseTimeView.m; sourceTree = "<group>"; };
+		4C3AAD7B1C2D3FDD006FEC00 /* SaveCaseTimeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveCaseTimeView.xib; sourceTree = "<group>"; };
+		4C3AAD7D1C2D45E8006FEC00 /* SaveCaseBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveCaseBottomView.h; sourceTree = "<group>"; };
+		4C3AAD7E1C2D45E8006FEC00 /* SaveCaseBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveCaseBottomView.m; sourceTree = "<group>"; };
+		4C3AAD801C2D4613006FEC00 /* SaveCaseBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveCaseBottomView.xib; sourceTree = "<group>"; };
+		4C3AAD821C2D4915006FEC00 /* ClaimSituationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaimSituationView.h; sourceTree = "<group>"; };
+		4C3AAD831C2D4915006FEC00 /* ClaimSituationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaimSituationView.m; sourceTree = "<group>"; };
+		4C3AAD851C2D492C006FEC00 /* ClaimSituationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClaimSituationView.xib; sourceTree = "<group>"; };
 		589FE0FD1C04ABA40043181D /* KCKPLeader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KCKPLeader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		589FE1011C04ABA40043181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		589FE1021C04ABA40043181D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -757,6 +787,9 @@
 				859067901C0586F200E9E15E /* CaseTableViewCell.h */,
 				859067911C0586F200E9E15E /* CaseTableViewCell.m */,
 				859067921C0586F200E9E15E /* CaseTableViewCell.xib */,
+				4C3AAD731C2D3705006FEC00 /* APPDataShowView.h */,
+				4C3AAD741C2D3705006FEC00 /* APPDataShowView.m */,
+				4C3AAD761C2D371E006FEC00 /* APPDataShowView.xib */,
 				859067951C058CEC00E9E15E /* TotalTableViewCell.h */,
 				859067961C058CEC00E9E15E /* TotalTableViewCell.m */,
 				859067971C058CEC00E9E15E /* TotalTableViewCell.xib */,
@@ -766,6 +799,21 @@
 				8546D0AE1C0D41E400317CFA /* SectionView.h */,
 				8546D0AF1C0D41E400317CFA /* SectionView.m */,
 				8546D0AC1C0D40BE00317CFA /* SectionView.xib */,
+				4C3AAD641C2D23E6006FEC00 /* DownloadsTableViewCell.h */,
+				4C3AAD651C2D23E6006FEC00 /* DownloadsTableViewCell.m */,
+				4C3AAD661C2D23E6006FEC00 /* DownloadsTableViewCell.xib */,
+				4C3AAD6E1C2D351E006FEC00 /* HeaderView.h */,
+				4C3AAD6F1C2D351E006FEC00 /* HeaderView.m */,
+				4C3AAD711C2D3547006FEC00 /* HeaderView.xib */,
+				4C3AAD781C2D3FCE006FEC00 /* SaveCaseTimeView.h */,
+				4C3AAD791C2D3FCE006FEC00 /* SaveCaseTimeView.m */,
+				4C3AAD7B1C2D3FDD006FEC00 /* SaveCaseTimeView.xib */,
+				4C3AAD7D1C2D45E8006FEC00 /* SaveCaseBottomView.h */,
+				4C3AAD7E1C2D45E8006FEC00 /* SaveCaseBottomView.m */,
+				4C3AAD801C2D4613006FEC00 /* SaveCaseBottomView.xib */,
+				4C3AAD821C2D4915006FEC00 /* ClaimSituationView.h */,
+				4C3AAD831C2D4915006FEC00 /* ClaimSituationView.m */,
+				4C3AAD851C2D492C006FEC00 /* ClaimSituationView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1016,10 +1064,14 @@
 			files = (
 				8546D0AD1C0D40BE00317CFA /* SectionView.xib in Resources */,
 				8590679E1C059E9C00E9E15E /* ProcessSituationCell.xib in Resources */,
+				4C3AAD7C1C2D3FDD006FEC00 /* SaveCaseTimeView.xib in Resources */,
 				85215F591C1E9DFF00587731 /* on.png in Resources */,
+				4C3AAD721C2D3547006FEC00 /* HeaderView.xib in Resources */,
 				859067801C055E4700E9E15E /* Main.storyboard in Resources */,
 				85AB10641C117AF300DC130D /* ClaimTotalCell.xib in Resources */,
+				4C3AAD771C2D371E006FEC00 /* APPDataShowView.xib in Resources */,
 				856206411C297CCF003E5B73 /* NewTrafficViewController.xib in Resources */,
+				4C3AAD811C2D4613006FEC00 /* SaveCaseBottomView.xib in Resources */,
 				859067C61C05BD9700E9E15E /* UserNameViewController.xib in Resources */,
 				859067941C0586F200E9E15E /* CaseTableViewCell.xib in Resources */,
 				856206461C2987F2003E5B73 /* NewTrafficCell.xib in Resources */,
@@ -1028,9 +1080,11 @@
 				859DB1A51C084633005602C6 /* ClaimSituationCellCell.xib in Resources */,
 				589FE1111C04ABA40043181D /* LaunchScreen.xib in Resources */,
 				859067A31C05A53600E9E15E /* SettingTableViewCell.xib in Resources */,
+				4C3AAD861C2D492C006FEC00 /* ClaimSituationView.xib in Resources */,
 				589FE10E1C04ABA40043181D /* Images.xcassets in Resources */,
 				8541A6FA1C06B15300B8BB2E /* PhoneBindingViewController.xib in Resources */,
 				859DB1AA1C0851F4005602C6 /* DataStatisticsCell.xib in Resources */,
+				4C3AAD681C2D23E6006FEC00 /* DownloadsTableViewCell.xib in Resources */,
 				85A6CD6B1C0C24DA001AEEDE /* ClaimDetailViewController.xib in Resources */,
 				8541A7031C06F22400B8BB2E /* Login.storyboard in Resources */,
 				85215F581C1E9DFF00587731 /* off.png in Resources */,
@@ -1140,6 +1194,7 @@
 				85BF74F61C0EC34E00B80CAD /* PicModel.m in Sources */,
 				859067BB1C05B08000E9E15E /* UserNameViewController.m in Sources */,
 				8529ECE21C195E6700C97465 /* PNColor.m in Sources */,
+				4C3AAD841C2D4915006FEC00 /* ClaimSituationView.m in Sources */,
 				859067A21C05A53600E9E15E /* SettingTableViewCell.m in Sources */,
 				8541A7101C070FAA00B8BB2E /* Util.m in Sources */,
 				8546D11A1C0D762700317CFA /* GTMBase64.m in Sources */,
@@ -1163,15 +1218,18 @@
 				8546D1161C0D756A00317CFA /* DESCript.m in Sources */,
 				8546D1461C0D957800317CFA /* InsnumModel.m in Sources */,
 				85BF75171C0ED5A800B80CAD /* ProModel.m in Sources */,
+				4C3AAD701C2D351E006FEC00 /* HeaderView.m in Sources */,
 				589FE1061C04ABA40043181D /* AppDelegate.m in Sources */,
 				859DB19F1C083E8D005602C6 /* JSONKeyMapper.m in Sources */,
 				8529ECED1C195E6700C97465 /* PNScatterChartDataItem.m in Sources */,
+				4C3AAD671C2D23E6006FEC00 /* DownloadsTableViewCell.m in Sources */,
 				859DB19C1C083E8D005602C6 /* JSONAPI.m in Sources */,
 				8546D1611C0DBCBE00317CFA /* AppDataModel.m in Sources */,
 				8529ECE01C195E6700C97465 /* PNChartLabel.m in Sources */,
 				8590676A1C055D8500E9E15E /* EPNaviController.m in Sources */,
 				589FE1331C04AE5C0043181D /* Globle.m in Sources */,
 				859067A61C05AF2200E9E15E /* TrafficAccidentViewController.m in Sources */,
+				4C3AAD7A1C2D3FCE006FEC00 /* SaveCaseTimeView.m in Sources */,
 				589FE1321C04AE5C0043181D /* EntityBean.m in Sources */,
 				8541A7061C07002D00B8BB2E /* TotalSituationViewController.m in Sources */,
 				8529ECEB1C195E6700C97465 /* PNScatterChart.m in Sources */,
@@ -1184,6 +1242,7 @@
 				859DB1971C083E8D005602C6 /* JSONModel.m in Sources */,
 				85BF751A1C0ED63200B80CAD /* DataDetail.m in Sources */,
 				85BF74EA1C0E849D00B80CAD /* DetDataModel.m in Sources */,
+				4C3AAD751C2D3705006FEC00 /* APPDataShowView.m in Sources */,
 				859DB1A01C083E8D005602C6 /* JSONValueTransformer.m in Sources */,
 				85305F5C1C2A2D4200964D5E /* NewDetTodayModel.m in Sources */,
 				859DB1A41C084633005602C6 /* ClaimSituationCellCell.m in Sources */,
@@ -1197,6 +1256,7 @@
 				85BF75141C0ED59C00B80CAD /* NumModel.m in Sources */,
 				85BF75021C0EC39E00B80CAD /* CpsModel.m in Sources */,
 				859DB19A1C083E8D005602C6 /* JSONModelError.m in Sources */,
+				4C3AAD7F1C2D45E8006FEC00 /* SaveCaseBottomView.m in Sources */,
 				8529ECDF1C195E6700C97465 /* PNBarChart.m in Sources */,
 				85BF750B1C0ECBF200B80CAD /* InsDataModel.m in Sources */,
 				853DB51F1C155370003F5BBA /* DayInsModel.m in Sources */,

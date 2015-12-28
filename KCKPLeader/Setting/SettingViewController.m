@@ -155,6 +155,14 @@
             
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             hud.labelText = @"正在退出";
+            BOOL isrem = 0;
+            BOOL islog = 0;
+            [[NSUserDefaults standardUserDefaults] setBool:isrem forKey:@"isrem"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
+            [[NSUserDefaults standardUserDefaults] setBool:islog forKey:@"islog"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            
             UIStoryboard *loginStoryboard=[UIStoryboard storyboardWithName:@"Login" bundle:nil];
             [self presentViewController:[loginStoryboard instantiateInitialViewController] animated:YES completion:nil];
         }

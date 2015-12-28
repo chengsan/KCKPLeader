@@ -24,8 +24,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"处理情况";
-    titleAry = @[@"交通事故处理大队情况",@"理赔处理情况",@"保险公司处理情况",@"交通事故处理支队情况"];
-    imgAry = @[@"ico01",@"ico02",@"ico03",@"ico4"];
+//    titleAry = @[@"交通事故处理大队情况",@"理赔处理情况",@"保险公司处理情况",@"交通事故处理支队情况"];
+//    imgAry = @[@"ico01",@"ico02",@"ico03",@"ico4"];
+    titleAry = @[@"交通事故处理大队情况",@"保险公司处理情况",@"交通事故处理支队情况"];
+    imgAry = @[@"ico01",@"ico03",@"ico4"];
+    
     
     UINib *nib = [UINib nibWithNibName:@"ProcessSituationCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"ProcessSituationCell"];
@@ -39,7 +42,7 @@
 #pragma mark - tableView代理
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 3;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -66,13 +69,13 @@
         newVC.titleStr = @"交通事故大队处理情况";
         [self presentViewController:newVC animated:YES completion:nil];
     }
+//    else if (indexPath.section == 1){
+//        ClaimViewController *vc = [ClaimViewController new];
+//        vc.title = titleAry[indexPath.section];
+//        vc.hidesBottomBarWhenPushed = YES;
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
     else if (indexPath.section == 1){
-        ClaimViewController *vc = [ClaimViewController new];
-        vc.title = titleAry[indexPath.section];
-        vc.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:vc animated:YES];
-    }
-    else if (indexPath.section == 2){
         InsuranceViewController *vc = [InsuranceViewController new];
         vc.title = titleAry[indexPath.section];
         vc.hidesBottomBarWhenPushed = YES;

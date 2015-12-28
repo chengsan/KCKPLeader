@@ -18,11 +18,11 @@
     NSMutableDictionary *bean;
     MBProgressHUD *hud;
     BOOL isRem;//是否记住密码
-    
+    BOOL isLog;
     NSInteger count;
 }
 @end
-
+ 
 @implementation LoginViewController
 
 - (void)viewDidLoad {
@@ -54,6 +54,7 @@
     
     isRem = [[NSUserDefaults standardUserDefaults] boolForKey:@"isrem"];
 
+    isLog = [[NSUserDefaults standardUserDefaults] boolForKey:@"islog"];
     
     NSLog(@"viewDidBool%d",isRem);
     if (isRem) {
@@ -68,11 +69,21 @@
         passWord = _passField.text;
         NSLog(@"_passField%@",_passField.text);
         
+        
     }
     else{
         self.remOn.image = [UIImage imageNamed:@"off"];
     }
     
+    if (isLog)
+    {
+        self.automaticLogImage.image = [UIImage imageNamed:@"on"];
+        [self presentHomePage];
+    }
+    else
+    {
+        self.automaticLogImage.image = [UIImage imageNamed:@"off"];
+    }
 
 }
 
@@ -94,7 +105,8 @@
             if ([loginState isEqualToString:@"登录成功"]) {
                 
                 hud.labelText = @"登录成功";
-                [hud hide:YES afterDelay:1.0];
+//                [hud hide:YES afterDelay:1.0];
+                [hud removeFromSuperview];
                 NSDictionary *currentUser = [dic objectForKey:@"data"];
                 NSString *currentUserName = [currentUser objectForKey:@"username"];
                 NSString *currentPhoneNum = [currentUser objectForKey:@"phone"];
@@ -148,16 +160,19 @@
     isRem = [[NSUserDefaults standardUserDefaults] boolForKey:@"isrem"];
     if (isRem) {
         isRem = 0;
+        
         self.remOn.image = [UIImage imageNamed:@"off"];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"username"];
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"password"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-
+        
+        self.automaticLogImage.image = [UIImage imageNamed:@"off"];
+        self.automaticLogBtn.enabled = NO;
     }
     else{
         isRem = 1;
         self.remOn.image = [UIImage imageNamed:@"on"];
-        
+        self.automaticLogBtn.enabled = YES;
     }
 
     NSLog(@"点击");
@@ -169,6 +184,30 @@
     
 
 }
+
+#pragma mark - 是否自动登录
+- (IBAction)automaticLogin:(id)sender {
+    self.automaticLogBtn.enabled = NO;
+    if (isRem == 1)
+    {
+        self.automaticLogBtn.enabled = YES;
+        isLog = [[NSUserDefaults standardUserDefaults] boolForKey:@"islog"];
+        if (isLog)
+        {
+            isLog = 0;
+            self.automaticLogImage.image = [UIImage imageNamed:@"off"];
+        }
+        else
+        {
+            isLog = 1;
+            self.automaticLogImage.image = [UIImage imageNamed:@"on"];
+            
+        }
+        [[NSUserDefaults standardUserDefaults] setBool:isLog forKey:@"islog"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
 
 //隐藏状态栏
 //-(BOOL)prefersStatusBarHidden{
