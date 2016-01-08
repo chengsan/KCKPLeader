@@ -8,11 +8,35 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>MMPlaceHolder.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>UICountingLabel.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -22,7 +46,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A312D72A1A4150F416768FF2910A9EA4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4769F5A02F8F6D614D08C2E1CB15D5F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F57EE809E0946FC04467CC503685F8E3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
